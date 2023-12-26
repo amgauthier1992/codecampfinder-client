@@ -11,14 +11,12 @@ const typography = {
   fontWeightMedium: 600,
   fontWeightBold: 700,
   h1: {
-    color: palette.primary.main,
     fontSize: '2.25rem',
     fontWeight: 600,
     lineHeight: 1.2,
     letterSpacing: '-0.09375rem'
   },
   h2: {
-    color: palette.primary.main,
     fontWeight: 500,
     fontSize: '1.75rem',
     lineHeight: 1.2,
@@ -72,14 +70,12 @@ const typography = {
     letterSpacing: '0.011rem'
   },
   caption1: {
-    // color:
     fontSize: '0.75rem',
     fontWeight: 400,
     lineHeight: 1.66,
     letterSpacing: '0.025rem'
   },
   caption2: {
-    // color:
     fontSize: '0.75rem',
     fontWeight: 400,
     fontStyle: 'italic',
