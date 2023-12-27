@@ -1,16 +1,23 @@
 const palette = {
   mode: 'light',
   primary: {
+    /* Old Blues */
+    // dark: '#4682b4',
+    // light: '#add8e6',
+    // main: '#1e90ff',
+
+    /* New Blues */
+    dark: '#003366',
+    light: '#66ccff',
+    main: '#0066cc',
+    contrastText: '#ffffff'
+  },
+  /* Orange- Previous primary palette choice */
+  secondary: {
     dark: '#f5821e',
-    light: '#faa819',
+    light: '#fcead6', //'#faa819',
     main: '#f89d1b',
     contrastText: '#242424'
-  },
-  secondary: {
-    dark: '#4682b4',
-    light: '#add8e6',
-    main: '#1e90ff',
-    contrastText: '#ffffff'
   },
   error: {
     dark: '#c62828',

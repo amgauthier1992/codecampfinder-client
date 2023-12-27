@@ -11,7 +11,8 @@ const Footer = () => {
       <Container maxWidth='xxl'>
         <Typography
           align='center'
-          fontWeight={600}
+          color='common.black'
+          fontWeight={500}
           variant='caption1'
         >
           Copyright © {new Date().getFullYear()} Codecamp Finder

@@ -6,7 +6,7 @@ import styles from './styles';
 
 const Header = () => {
   return (
-    <AppBar position='static'>
+    <AppBar position='sticky'>
       <Container maxWidth='xxl'>
         <Toolbar
           disableGutters
