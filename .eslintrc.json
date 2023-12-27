@@ -27,7 +27,14 @@
     "complexity": ["error", 23],
     "indent": ["error", 2],
     "linebreak-style": ["error", "windows"],
-    "quotes": ["error", "single"],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ],
     "semi": ["error", "always"]
   },
   "settings": {

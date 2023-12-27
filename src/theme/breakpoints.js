@@ -1,5 +1,5 @@
 const breakpoints = {
-  keys: ['xs', 'sm', 'md', 'lg', 'xl'],
+  keys: ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'],
   values: {
     xs: 0,
     sm: 600,
