@@ -6,7 +6,7 @@ const NavLinks = () => {
   return (
     <Stack
       direction='row'
-      spacing={2}
+      spacing={4}
     >
       <MUILink
         component={ReactRouterLink}

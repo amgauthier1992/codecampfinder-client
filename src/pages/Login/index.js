@@ -1,4 +1,5 @@
-import { Container } from '@mui/material';
+import { Container, Paper } from '@mui/material';
+import LoginForm from './form';
 import styles from './styles';
 
 const Login = () => {
@@ -7,7 +8,9 @@ const Login = () => {
       maxWidth='xxl'
       sx={styles.Container}
     >
-      Login
+      <Paper sx={styles.FormCard}>
+        <LoginForm />
+      </Paper>
     </Container>
   );
 };
