@@ -22,7 +22,7 @@ const SignUpForm = () => {
         component='form'
         container
         onSubmit={handleSubmit(onSubmit)}
-        spacing={1}
+        spacing={4}
         sx={styles.RegisterForm}
       >
         <DataObjectIcon sx={styles.LogoIcon} />
@@ -167,6 +167,7 @@ const SignUpForm = () => {
         <Grid
           item
           xs={12}
+          sx={styles.GridItem}
         >
           <Stack
             direction='column'

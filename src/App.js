@@ -36,4 +36,3 @@ export default App;
 
 //Things to explore:
 //1. React-error-boundary (hook-based solution)
-//2. Form validation solutions

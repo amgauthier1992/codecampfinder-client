@@ -2,7 +2,6 @@ const styles = {
   Container: {
     '&.MuiContainer-root': ({ breakpoints }) => ({
       display: 'flex',
-      height: '100vh',
       paddingTop: '64px',
       paddingBottom: '64px',
       [breakpoints.up('sm')]: {
