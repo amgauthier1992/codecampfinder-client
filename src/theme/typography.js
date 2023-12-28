@@ -12,7 +12,7 @@ const typography = {
   fontWeightBold: 700,
   h1: {
     fontSize: '2.25rem',
-    fontWeight: 600,
+    fontWeight: 700,
     lineHeight: 1.2,
     letterSpacing: '-0.09375rem'
   },
