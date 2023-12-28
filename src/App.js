@@ -2,6 +2,7 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import NotFound from './pages/NotFound';
 import SignUp from './pages/SignUp';
 import theme from './theme';
 
@@ -25,7 +26,7 @@ const App = () => {
         />
         <Route
           path='*'
-          element={<div>404: Not Found</div>}
+          element={<NotFound />}
         />
       </Routes>
     </ThemeProvider>
