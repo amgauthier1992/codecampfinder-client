@@ -1,5 +1,9 @@
 const styles = {
-  Container: {
+  Backdrop: () => ({
+    color: '#fff',
+    zIndex: 100
+  }),
+  Container: () => ({
     '&.MuiContainer-root': ({ palette }) => ({
       display: 'flex',
       justifyContent: 'center',
@@ -8,7 +12,7 @@ const styles = {
       height: '100vh',
       backgroundColor: palette.primary.main
     })
-  },
+  }),
   GridItem: () => ({
     '&.MuiGrid-item': {
       paddingLeft: '0 !important'

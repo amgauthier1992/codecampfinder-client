@@ -1,21 +1,48 @@
-import { Button, Grid, Link, Stack, TextField, Typography } from '@mui/material';
+import {
+  Backdrop,
+  Button,
+  CircularProgress,
+  Grid,
+  Link,
+  Stack,
+  TextField,
+  Typography
+} from '@mui/material';
 import { useForm, Controller } from 'react-hook-form';
 import { useCallback } from 'react';
 import { Link as ReactRouterLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
 import DataObjectIcon from '@mui/icons-material/DataObject';
 import PersonIcon from '@mui/icons-material/Person';
 import KeyOutlinedIcon from '@mui/icons-material/KeyOutlined';
 import styles from './styles';
 
 const LoginForm = () => {
+  const navigate = useNavigate();
   const { handleSubmit, control } = useForm();
+  const { isAuthenticating, login } = useAuth();
 
-  const onSubmit = useCallback((data, e) => {
-    console.log(data, e);
-  }, []);
+  const handleRedirectToDashboard = useCallback(() => {
+    navigate('/dashboard');
+  }, [navigate]);
+
+  const onSubmit = useCallback(
+    (data, e) => {
+      e.preventDefault();
+      login(data, handleRedirectToDashboard);
+    },
+    [handleRedirectToDashboard, login]
+  );
 
   return (
     <>
+      <Backdrop
+        open={isAuthenticating}
+        sx={styles.Backdrop}
+      >
+        <CircularProgress color='primary' />
+      </Backdrop>
       <Grid
         component='form'
         container
@@ -23,7 +50,14 @@ const LoginForm = () => {
         spacing={4}
         sx={styles.LoginForm}
       >
-        <DataObjectIcon sx={styles.LogoIcon} />
+        <Link
+          component={ReactRouterLink}
+          ml='auto'
+          mr='auto'
+          to='/'
+        >
+          <DataObjectIcon sx={styles.LogoIcon} />
+        </Link>
         <Grid
           item
           xs={12}
@@ -43,10 +77,11 @@ const LoginForm = () => {
         >
           <Controller
             control={control}
-            name='username'
+            name='user_name'
             render={({ field: { onChange, value }, fieldState: { error } }) => (
               <TextField
                 label='Username'
+                placeholder='testUser123'
                 onChange={onChange}
                 variant='outlined'
                 value={value}
@@ -76,6 +111,7 @@ const LoginForm = () => {
             render={({ field: { onChange, value }, fieldState: { error } }) => (
               <TextField
                 label='Password'
+                placeholder='Abcd123!'
                 onChange={onChange}
                 variant='outlined'
                 value={value}
