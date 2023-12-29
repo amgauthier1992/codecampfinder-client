@@ -4,12 +4,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { AuthProvider } from './context/AuthContext';
+import { RecoilRoot } from 'recoil';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-      <App />
+      <RecoilRoot>
+        <AuthProvider>
+          <App />
+        </AuthProvider>
+      </RecoilRoot>
     </React.StrictMode>
   </BrowserRouter>
 );

@@ -1,5 +1,9 @@
 const styles = {
-  Container: {
+  Backdrop: () => ({
+    color: '#fff',
+    zIndex: 100
+  }),
+  Container: () => ({
     '&.MuiContainer-root': ({ breakpoints }) => ({
       display: 'flex',
       paddingTop: '64px',
@@ -19,7 +23,7 @@ const styles = {
         padding: '100px 240px 64px 128px'
       }
     })
-  },
+  }),
   GridItem: () => ({
     '&.MuiGrid-item': {
       paddingLeft: 0

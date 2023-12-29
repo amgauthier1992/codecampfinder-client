@@ -1,5 +1,8 @@
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { Routes, Route } from 'react-router-dom';
+import { Alert } from './components/Alert';
+import PrivateRoute from './components/PrivateRoute';
+import Dashboard from './pages/Dashboard';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import NotFound from './pages/NotFound';
@@ -10,6 +13,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <Alert />
       <Routes>
         <Route
           exact
@@ -25,6 +29,16 @@ const App = () => {
           element={<SignUp />}
         />
         <Route
+          index
+          exact
+          path='/dashboard'
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        />
+        <Route
           path='*'
           element={<NotFound />}
         />
@@ -34,6 +48,3 @@ const App = () => {
 };
 
 export default App;
-
-//Things to explore:
-//1. React-error-boundary (hook-based solution)

@@ -1,23 +1,49 @@
-import { Button, Grid, Link, Stack, TextField, Typography } from '@mui/material';
+import {
+  Backdrop,
+  Button,
+  CircularProgress,
+  Grid,
+  Link,
+  Stack,
+  TextField,
+  Typography
+} from '@mui/material';
 import { useCallback } from 'react';
 import { useForm, Controller } from 'react-hook-form';
-import { Link as ReactRouterLink } from 'react-router-dom';
+import { Link as ReactRouterLink, useNavigate } from 'react-router-dom';
 import styles from './styles';
 
 import BadgeIcon from '@mui/icons-material/Badge';
 import DataObjectIcon from '@mui/icons-material/DataObject';
 import PersonIcon from '@mui/icons-material/Person';
 import KeyOutlinedIcon from '@mui/icons-material/KeyOutlined';
+import { useRegisterUser } from '../../_actions/users.actions';
 
 const SignUpForm = () => {
+  const navigate = useNavigate();
   const { handleSubmit, control } = useForm();
+  const { loading, post } = useRegisterUser();
 
-  const onSubmit = useCallback((data, e) => {
-    console.log(data, e);
-  }, []);
+  const handleRedirectToLogin = useCallback(() => {
+    navigate('/login');
+  }, [navigate]);
+
+  const onSubmit = useCallback(
+    (data, e) => {
+      e.preventDefault();
+      post(data, handleRedirectToLogin);
+    },
+    [handleRedirectToLogin, post]
+  );
 
   return (
     <>
+      <Backdrop
+        open={loading}
+        sx={styles.Backdrop}
+      >
+        <CircularProgress color='inherit' />
+      </Backdrop>
       <Grid
         component='form'
         container
@@ -25,7 +51,14 @@ const SignUpForm = () => {
         spacing={4}
         sx={styles.RegisterForm}
       >
-        <DataObjectIcon sx={styles.LogoIcon} />
+        <Link
+          component={ReactRouterLink}
+          ml='auto'
+          mr='auto'
+          to='/'
+        >
+          <DataObjectIcon sx={styles.LogoIcon} />
+        </Link>
         <Grid
           item
           xs={12}
@@ -45,7 +78,7 @@ const SignUpForm = () => {
         >
           <Controller
             control={control}
-            name='firstName'
+            name='first_name'
             render={({ field: { onChange, value }, fieldState: { error } }) => (
               <TextField
                 label='First Name'
@@ -72,7 +105,7 @@ const SignUpForm = () => {
         >
           <Controller
             control={control}
-            name='lastName'
+            name='last_name'
             render={({ field: { onChange, value }, fieldState: { error } }) => (
               <TextField
                 label='Last Name'
@@ -99,7 +132,7 @@ const SignUpForm = () => {
         >
           <Controller
             control={control}
-            name='username'
+            name='user_name'
             render={({ field: { onChange, value }, fieldState: { error } }) => (
               <TextField
                 label='Username'
