@@ -9,7 +9,7 @@ const PrivateRoute = ({ children }) => {
     children //Outlet?
   ) : (
     <Navigate
-      to='/login'
+      to='/unauthorized'
       state={{ from: location }}
       replace
     />
