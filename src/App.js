@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import NotFound from './pages/NotFound';
 import SignUp from './pages/SignUp';
+import Unauthorized from './pages/Unauthorized';
 import theme from './theme';
 
 const App = () => {
@@ -37,6 +38,10 @@ const App = () => {
               <Dashboard />
             </PrivateRoute>
           }
+        />
+        <Route
+          path='/unauthorized'
+          element={<Unauthorized />}
         />
         <Route
           path='*'

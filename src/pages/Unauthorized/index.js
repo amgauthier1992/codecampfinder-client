@@ -1,16 +1,20 @@
-import { Box, Button, Container, Stack, Typography } from '@mui/material';
+import { Button, Container, Stack, Typography } from '@mui/material';
 import { useCallback } from 'react';
 import { useNavigate } from 'react-router';
 import { useIsMobile } from '../../_helpers/breakpoint';
 
 import styles from './styles';
 
-const NotFound = () => {
+const Unauthorized = () => {
   const isMobile = useIsMobile();
   const navigate = useNavigate();
 
   const navigateHome = useCallback(() => {
     navigate('/');
+  }, [navigate]);
+
+  const navigateToLogin = useCallback(() => {
+    navigate('/login');
   }, [navigate]);
 
   return (
@@ -25,17 +29,19 @@ const NotFound = () => {
           fontWeight={800}
           fontSize={isMobile ? '40px' : '48px'}
         >
-          {'<> 404: Page Not Found </>'}
+          {'<> 401: Unauthorized </>'}
         </Typography>
         <Typography
           variant='body1'
           sx={styles.Content}
         >
-          The page you’re trying to access doesn’t exist. If you typed the url manually, please
-          double-check your spelling. Otherwise, navigate back to the home page by using the button
-          below.
+          {`You do not have permission to access the requested page. If you haven't yet created an account you will need to do this beforehand. Otherwise, you may need to log back in to re-authenticate yourself.`}
         </Typography>
-        <Box sx={styles.CtaWrapper}>
+        <Stack
+          direction='row'
+          justifyContent={isMobile ? 'center' : 'flex-start'}
+          spacing={2}
+        >
           <Button
             onClick={navigateHome}
             variant='contained'
@@ -43,10 +49,17 @@ const NotFound = () => {
           >
             Back to Home
           </Button>
-        </Box>
+          <Button
+            onClick={navigateToLogin}
+            variant='outlined'
+            sx={styles.Cta}
+          >
+            Login
+          </Button>
+        </Stack>
       </Stack>
     </Container>
   );
 };
 
-export default NotFound;
+export default Unauthorized;

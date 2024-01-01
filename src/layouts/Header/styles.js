@@ -1,8 +1,6 @@
-import { green } from '@mui/material/colors';
-
 const styles = {
   Avatar: ({ palette }) => ({
-    backgroundColor: green[500],
+    backgroundColor: '#0bb712',
     color: palette.common.white,
     width: 38,
     height: 38

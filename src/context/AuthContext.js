@@ -4,11 +4,13 @@ import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { isAuthenticatedState, sessionState } from '../_state/session';
 import { userState } from '../_state/user';
 import { useAlertActions } from '../_actions/alert.actions';
+import { useNavigate } from 'react-router';
 import axios from 'axios';
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
+  const navigate = useNavigate();
   const isAuthenticated = useRecoilValue(isAuthenticatedState);
   const [isAuthenticating, setIsAuthenticating] = useState(false);
   const setSession = useSetRecoilState(sessionState);
@@ -45,6 +47,7 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     setSession(null);
     setUser(null);
+    navigate('/login');
   };
 
   return (
