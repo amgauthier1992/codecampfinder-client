@@ -10,8 +10,8 @@ import styles from './styles';
 const NavLinks = () => {
   const { isAuthenticated } = useAuth();
   const user = useRecoilValue(userState);
-  const firstInitial = user?.firstName.charAt(0);
-  const lastInitial = user?.lastName.charAt(0);
+  const firstInitial = user?.firstName?.charAt(0);
+  const lastInitial = user?.lastName?.charAt(0);
 
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
