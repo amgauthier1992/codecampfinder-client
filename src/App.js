@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import NotFound from './pages/NotFound';
 import SignUp from './pages/SignUp';
 import Unauthorized from './pages/Unauthorized';
+import BootcampSearch from './pages/BootcampSearch';
 import theme from './theme';
 
 const App = () => {
@@ -58,7 +59,7 @@ const App = () => {
             path='search'
             element={
               <PrivateRoute>
-                <>Search Courses</>
+                <BootcampSearch />
               </PrivateRoute>
             }
           />
