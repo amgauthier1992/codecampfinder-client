@@ -28,6 +28,11 @@ export const useIsTablet = () => {
   return useMediaQuery(theme.breakpoints.between('sm', 'lg'));
 };
 
+export const useIsLargerThanMd = () => {
+  const theme = useTheme();
+  return useMediaQuery(theme.breakpoints.up('md'));
+};
+
 export const useIsDesktop = () => {
   const theme = useTheme();
   return useMediaQuery(theme.breakpoints.up('lg'));

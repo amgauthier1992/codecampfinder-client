@@ -30,7 +30,6 @@ const App = () => {
           element={<SignUp />}
         />
         <Route
-          index
           exact
           path='/dashboard'
           element={
@@ -38,7 +37,40 @@ const App = () => {
               <Dashboard />
             </PrivateRoute>
           }
-        />
+        >
+          <Route
+            index
+            element={
+              <PrivateRoute>
+                <>My Courses</>
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path='courses/:courseId'
+            element={
+              <PrivateRoute>
+                <>Course ABC</>
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path='search'
+            element={
+              <PrivateRoute>
+                <>Search Courses</>
+              </PrivateRoute>
+            }
+          />
+          {/* <Route
+            path='settings'
+            element={
+              <PrivateRoute>
+                <>Settings</>
+              </PrivateRoute>
+            }
+          /> */}
+        </Route>
         <Route
           path='/unauthorized'
           element={<Unauthorized />}

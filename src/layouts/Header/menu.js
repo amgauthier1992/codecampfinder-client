@@ -4,6 +4,7 @@ import { useCallback } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import SpaceDashboardOutlinedIcon from '@mui/icons-material/SpaceDashboardOutlined';
 import Logout from '@mui/icons-material/Logout';
+import PropTypes from 'prop-types';
 
 const UserMenu = ({ anchorEl, handleClose, open }) => {
   const { logout } = useAuth();
@@ -62,3 +63,13 @@ const UserMenu = ({ anchorEl, handleClose, open }) => {
 };
 
 export default UserMenu;
+
+UserMenu.defaultProps = {
+  open: false
+};
+
+UserMenu.propTypes = {
+  anchorEl: PropTypes.any,
+  handleClose: PropTypes.func.isRequired,
+  open: PropTypes.bool
+};

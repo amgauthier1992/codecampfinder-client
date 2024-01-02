@@ -1,22 +1,7 @@
-import { Button } from '@mui/material';
-import { Outlet } from 'react-router';
-import { useCallback } from 'react';
-import { useAuth } from '../../context/AuthContext';
+import DashboardLayout from '../../layouts/Dashboard';
 
 const Dashboard = () => {
-  const { logout } = useAuth();
-
-  const handleLogout = useCallback(() => {
-    logout();
-  }, [logout]);
-
-  return (
-    <>
-      <Outlet />
-      Dashboard
-      <Button onClick={handleLogout}>Log Out</Button>
-    </>
-  );
+  return <DashboardLayout />;
 };
 
 export default Dashboard;
