@@ -26,7 +26,7 @@ const SignUp = () => {
         <img
           alt='Woman sitting at desk coding'
           className='signup-img'
-          src={`${process.env.PUBLIC_URL}/sign-up.png`}
+          src={require('../../images/sign-up.png')}
         />
       )}
       <SignUpForm />
