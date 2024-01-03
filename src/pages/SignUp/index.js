@@ -1,8 +1,8 @@
 import { Container } from '@mui/material';
-import SignUpForm from './form';
+import { useIsDesktop } from '../../_helpers/breakpoint';
+import SignUpForm from '../../components/SignUpForm';
 import styles from './styles';
 import './styles.css';
-import { useIsDesktop } from '../../_helpers/breakpoint';
 
 const imageStyles = {
   width: '675px',
@@ -26,7 +26,7 @@ const SignUp = () => {
         <img
           alt='Woman sitting at desk coding'
           className='signup-img'
-          src={`${process.env.PUBLIC_URL}/sign-up.png`}
+          src={require('../../images/sign-up.png')}
         />
       )}
       <SignUpForm />

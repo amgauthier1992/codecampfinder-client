@@ -25,7 +25,7 @@ export const AuthProvider = ({ children }) => {
 
     try {
       const response = await axios.post(url, body, {
-        headers: { 'Content-Type': 'application/json' }
+        headers: { 'content-type': 'application/json' }
       });
 
       if (response?.data && Object.keys(response?.data).length) {

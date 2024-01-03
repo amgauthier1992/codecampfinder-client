@@ -1,5 +1,5 @@
 import { Container, Paper } from '@mui/material';
-import LoginForm from './form';
+import LoginForm from '../../components/LoginForm';
 import styles from './styles';
 
 const Login = () => {

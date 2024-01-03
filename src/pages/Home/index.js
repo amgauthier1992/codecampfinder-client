@@ -39,9 +39,9 @@ const Home = () => {
       </Stack>
       <Box sx={styles.ImgWrapper}>
         <Box
-          alt='Man sitting at desk using desktop comnputer'
+          alt='Man sitting at desk using desktop computer'
           component='img'
-          src={`${process.env.PUBLIC_URL}/codecamp.jpg`}
+          src={require('../../images/codecamp.jpg')}
           sx={styles.Image}
         />
       </Box>

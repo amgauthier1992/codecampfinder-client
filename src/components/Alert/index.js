@@ -53,7 +53,9 @@ function Alert() {
       <DialogContent sx={styles.Content}>
         <Stack spacing={2}>
           <Typography>
-            {alert?.error?.message}. {alert?.error?.response?.data?.error}
+            {alert?.error?.message}. {alert?.error?.response?.data?.message}{' '}
+            {alert?.error?.response?.data?.error?.message}{' '}
+            {!alert?.error?.response?.data?.error?.message && alert?.error?.response?.data?.error}
           </Typography>
           <Typography>
             Please, try again. If the error persists, please contact us at help@codecampfinder.com

@@ -8,16 +8,15 @@ import {
   TextField,
   Typography
 } from '@mui/material';
-import { useCallback } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { Link as ReactRouterLink, useNavigate } from 'react-router-dom';
-import styles from './styles';
-
+import { useCallback } from 'react';
+import { useRegisterUser } from '../../_actions/users.actions';
 import BadgeIcon from '@mui/icons-material/Badge';
 import DataObjectIcon from '@mui/icons-material/DataObject';
 import PersonIcon from '@mui/icons-material/Person';
 import KeyOutlinedIcon from '@mui/icons-material/KeyOutlined';
-import { useRegisterUser } from '../../_actions/users.actions';
+import styles from './styles';
 
 const SignUpForm = () => {
   const navigate = useNavigate();
