@@ -51,6 +51,9 @@ const styles = {
   GridItem: () => ({
     padding: '8px'
   }),
+  GridItemHeader: () => ({
+    paddingBottom: '8px'
+  }),
   RepaymentGuarantee: () => ({
     display: 'flex',
     alignItems: 'flex-start'

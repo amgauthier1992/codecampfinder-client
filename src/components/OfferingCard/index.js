@@ -85,7 +85,7 @@ const OfferingCard = ({ offering, toggleSuccessAlert }) => {
               <Grid
                 item
                 xs={12}
-                sx={{ paddingBottom: '8px' }}
+                sx={styles.GridItemHeader}
               >
                 <Typography
                   key={course.Name}
