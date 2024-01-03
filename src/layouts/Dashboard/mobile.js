@@ -59,7 +59,9 @@ const DashboardMobile = () => {
               <DataObjectIcon sx={styles.LogoIcon} />
               <Typography
                 color='common.white'
-                variant='h6'
+                component='div'
+                fontWeight={800}
+                variant='body1'
               >
                 Codecamp Finder
               </Typography>

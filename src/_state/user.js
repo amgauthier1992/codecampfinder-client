@@ -20,4 +20,9 @@ const userState = atom({
   effects: [localStorageSync('user')]
 });
 
-export { userState };
+const userCoursesState = atom({
+  key: 'userCoursesState',
+  default: {},
+});
+
+export { userState, userCoursesState };

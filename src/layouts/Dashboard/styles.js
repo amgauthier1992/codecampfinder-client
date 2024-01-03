@@ -8,10 +8,13 @@ const styles = {
     flexGrow: 1,
     padding: '32px',
     [breakpoints.up('lg')]: {
-      padding: '64px'
+      padding: '48px'
     }
   }),
   CenterWellMobile: ({ breakpoints }) => ({
+    [breakpoints.down('sm')]: {
+      width: '100%'
+    },
     flexGrow: 1,
     padding: '72px 16px 16px 16px',
     [breakpoints.up('sm')]: {
