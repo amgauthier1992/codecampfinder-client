@@ -27,12 +27,12 @@ _Disclaimer_ - Information regarding bootcamps and courses, especially informati
 
 ## Quick App Demo
 
-![Home](https://imgur.com/Qc74KZD)
-![Signup](https://imgur.com/JSkiqhA)
-![Login](https://imgur.com/pjyLd8a)
+![Home](https://i.imgur.com/Qc74KZD.png)
+![Signup](https://i.imgur.com/JSkiqhA.png)
+![Login](https://i.imgur.com/pjyLd8a.png)
 ![Dashboard]()
-![Search](https://imgur.com/gHEPwVt)
-![Results](https://imgur.com/mpOtkB4)
+![Search](https://i.imgur.com/gHEPwVt.png)
+![Results](https://i.imgur.com/mpOtkB4.png)
 
 ## Technology
 
