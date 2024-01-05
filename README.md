@@ -2,9 +2,7 @@
 
 Find a coding bootcamp that's right for you. Search for coding bootcamps and their associated course offerings based on your location and individualized criteria.
 
-This repo is the front-end client, built in React. You can see the app live at: insert-link
-
-<!-- [https://codecampfinder.vercel.app/](https://codecampfinder.vercel.app/) -->
+This repo is the front-end client, built in React. You can see the app live at [https://codecampfinder.vercel.app/](https://codecampfinder.vercel.app/)
 
 To check out the app, you can use the demo account below or create your own account.
 
