@@ -58,7 +58,7 @@ const SearchForm = ({ handleDisplayResults }) => {
               variant='body1'
               fontWeight={600}
             >
-              {'1) Please select a state'}
+              {'1. Please select a state'}
             </Typography>
             <Controller
               control={control}
@@ -93,7 +93,7 @@ const SearchForm = ({ handleDisplayResults }) => {
               variant='body1'
               fontWeight={600}
             >
-              {'2) Should the course only be online / remote-friendly?'}
+              {'2. Should the course only be online / remote-friendly?'}
             </Typography>
             <Controller
               control={control}
@@ -127,7 +127,7 @@ const SearchForm = ({ handleDisplayResults }) => {
               variant='body1'
               fontWeight={600}
             >
-              {'3) Do you have any prior programming experience?'}
+              {'3. Do you have any prior programming experience?'}
             </Typography>
             <Controller
               control={control}
@@ -162,7 +162,7 @@ const SearchForm = ({ handleDisplayResults }) => {
               variant='body1'
               fontWeight={600}
             >
-              {'4) What type of course schedule can you commit to?'}
+              {'4. What type of course schedule can you commit to?'}
             </Typography>
             <Controller
               control={control}
@@ -198,7 +198,7 @@ const SearchForm = ({ handleDisplayResults }) => {
               fontWeight={600}
             >
               {
-                '5) Do you anticipate financing your investment or require a course that will offer some form of financial assistance or contingency (i.e. Income Sharing Agreement)?'
+                '5. Do you anticipate financing your investment or require a course that will offer some form of financial assistance or contingency (i.e. Income Sharing Agreement)?'
               }
             </Typography>
             <Controller

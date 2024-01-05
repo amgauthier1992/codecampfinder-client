@@ -1,8 +1,18 @@
-import { AppBar, Box, Drawer, IconButton, Stack, Toolbar, Typography, styled } from '@mui/material';
+import {
+  AppBar,
+  Box,
+  Drawer,
+  IconButton,
+  Link,
+  Stack,
+  Toolbar,
+  Typography,
+  styled
+} from '@mui/material';
 import { useCallback, useRef, useState } from 'react';
 import { Outlet, useNavigate } from 'react-router';
 import { useAuth } from '../../context/AuthContext';
-
+import { Link as ReactRouterLink } from 'react-router-dom';
 import CloseIcon from '@mui/icons-material/Close';
 import DataObjectIcon from '@mui/icons-material/DataObject';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
@@ -56,15 +66,22 @@ const DashboardMobile = () => {
               direction='row'
               alignItems='center'
             >
-              <DataObjectIcon sx={styles.LogoIcon} />
-              <Typography
-                color='common.white'
-                component='div'
-                fontWeight={800}
+              <Link
+                component={ReactRouterLink}
+                to='/'
                 variant='body1'
+                sx={styles.HomeLink}
               >
-                Codecamp Finder
-              </Typography>
+                <DataObjectIcon sx={styles.LogoIcon} />
+                <Typography
+                  color='common.white'
+                  component='div'
+                  fontWeight={800}
+                  variant='body1'
+                >
+                  Codecamp Finder
+                </Typography>
+              </Link>
             </Stack>
           </Stack>
         </Toolbar>

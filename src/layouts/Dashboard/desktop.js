@@ -1,12 +1,11 @@
-import { AppBar, Box, Drawer, Toolbar, Typography } from '@mui/material';
-
+import { AppBar, Box, Drawer, Link, Toolbar, Typography } from '@mui/material';
 import { Outlet, useNavigate } from 'react-router';
-
+import { Link as ReactRouterLink } from 'react-router-dom';
+import { useCallback } from 'react';
+import { useAuth } from '../../context/AuthContext';
 import MenuLinks from './links';
 import DataObjectIcon from '@mui/icons-material/DataObject';
 import styles from './styles';
-import { useCallback } from 'react';
-import { useAuth } from '../../context/AuthContext';
 
 export default function DashboardDesktop() {
   const navigate = useNavigate();
@@ -38,15 +37,22 @@ export default function DashboardDesktop() {
         variant='permanent'
       >
         <Toolbar>
-          <DataObjectIcon sx={styles.LogoIcon} />{' '}
-          <Typography
-            color='common.white'
-            component='div'
-            fontWeight={800}
+          <Link
+            component={ReactRouterLink}
+            to='/'
             variant='body1'
+            sx={styles.HomeLink}
           >
-            Codecamp Finder
-          </Typography>
+            <DataObjectIcon sx={styles.LogoIcon} />
+            <Typography
+              color='common.white'
+              component='div'
+              fontWeight={800}
+              variant='body1'
+            >
+              Codecamp Finder
+            </Typography>
+          </Link>
         </Toolbar>
         <MenuLinks handleClickMenuItem={handleClickMenuItem} />
       </Drawer>

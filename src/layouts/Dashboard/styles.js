@@ -33,6 +33,9 @@ const styles = {
   Divider: () => ({
     borderColor: 'white'
   }),
+  HomeLink: () => ({
+    display: 'flex'
+  }),
   FixedHeaderOffset: () => ({
     margin: 0
   }),

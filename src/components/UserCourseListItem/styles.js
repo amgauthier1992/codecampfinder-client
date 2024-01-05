@@ -7,6 +7,9 @@ const styles = {
     boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
     minHeight: '220px'
   }),
+  CardActions: () => ({
+    padding: 0
+  }),
   CardContent: () => ({
     '&.MuiCardContent-root': {
       padding: '0px 0px 0px 16px'
