@@ -1,12 +1,18 @@
 import { Grid, Link, Typography } from '@mui/material';
 import { Modal } from '../Modal';
 import { WEBSITES } from '../../static-info';
+import { formatCurrency } from '../../_helpers/formatters/currency';
 import styles from './styles';
 
 const UserCourseDetails = ({ currentCourse, handleClose, open }) => {
   if (!currentCourse) {
     return null;
   }
+
+  const courseSchedule =
+    currentCourse?.Schedule?.type.charAt(0).toUpperCase() +
+    currentCourse?.Schedule?.type.slice(1).replace(/_/g, ' ');
+  const formattedCost = formatCurrency(currentCourse?.PaymentSummary?.up_front);
 
   return (
     <Modal
@@ -47,11 +53,18 @@ const UserCourseDetails = ({ currentCourse, handleClose, open }) => {
             fontWeight={600}
             sx={styles.LineItem}
           >
-            Website:{' '}
+            <Typography
+              variant='span'
+              fontWeight={600}
+              mr={0.5}
+            >
+              Website:{' '}
+            </Typography>
             <Typography
               component={Link}
               href={WEBSITES[currentCourse?.Course?.bootcamp]}
               fontWeight={600}
+              target='_blank'
               variant='span'
             >
               {WEBSITES[currentCourse?.Course?.bootcamp]}
@@ -79,8 +92,7 @@ const UserCourseDetails = ({ currentCourse, handleClose, open }) => {
             >
               Course Schedule:{' '}
             </Typography>
-            {currentCourse?.Schedule?.type.charAt(0).toUpperCase() +
-              currentCourse?.Schedule?.type.slice(1).replace(/_/g, ' ')}
+            {courseSchedule}
           </Typography>
           <Typography
             variant='body1'
@@ -173,7 +185,7 @@ const UserCourseDetails = ({ currentCourse, handleClose, open }) => {
             >
               Up-front Cost:{' '}
             </Typography>
-            ${currentCourse?.PaymentSummary?.up_front}
+            {formattedCost}
           </Typography>
           <Typography
             variant='body1'

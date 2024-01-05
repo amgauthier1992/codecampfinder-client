@@ -24,7 +24,7 @@ const BootcampSearch = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setAlertVisible(false);
-    }, 1000);
+    }, 2000);
     return () => clearTimeout(timer);
   }, [alertVisible]);
 

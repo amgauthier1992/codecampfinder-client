@@ -10,11 +10,12 @@ import {
   Typography
 } from '@mui/material';
 import { usePostUserCourse } from '../../_actions/users.actions';
+import { formatCurrency } from '../../_helpers/formatters/currency';
+import React, { useCallback } from 'react';
 import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutlineOutlined';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import PropTypes from 'prop-types';
 import styles from './styles';
-import React, { useCallback } from 'react';
 
 const OfferingCard = ({ offering, toggleSuccessAlert }) => {
   const { post } = usePostUserCourse();
@@ -119,7 +120,9 @@ const OfferingCard = ({ offering, toggleSuccessAlert }) => {
                 lg={4}
                 sx={styles.GridItem}
               >
-                <Typography variant='body2'>{`Up-front Cost: $${course.PaymentSummary.Up_front}`}</Typography>
+                <Typography variant='body2'>{`Up-front Cost: ${formatCurrency(
+                  course.PaymentSummary.Up_front
+                )}`}</Typography>
               </Grid>
               <Grid
                 item
