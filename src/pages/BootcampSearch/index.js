@@ -1,7 +1,8 @@
-import { Alert, Backdrop, Button, CircularProgress, Snackbar } from '@mui/material';
+import { Backdrop, Button, CircularProgress } from '@mui/material';
 import { useCallback, useEffect, useState } from 'react';
 import { useSearchCourses } from '../../_actions/courses.actions';
 import { usePostUserCourse } from '../../_actions/users.actions';
+import Snackbar from '../../components/Snackbar';
 import CourseList from '../../components/CourseList';
 import SearchForm from '../../components/SearchForm';
 import styles from './styles';
@@ -16,14 +17,14 @@ const BootcampSearch = () => {
     setFormHidden(true);
   }, []);
 
-  const toggleSuccessAlert = useCallback(() => {
+  const togglePostSuccessAlert = useCallback(() => {
     setAlertVisible(true);
   }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setAlertVisible(false);
-    }, 2000);
+    }, 1000);
     return () => clearTimeout(timer);
   }, [alertVisible]);
 
@@ -37,21 +38,12 @@ const BootcampSearch = () => {
       </Backdrop>
       {alertVisible && (
         <Snackbar
-          autoHideDuration={null}
-          anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+          message='Course Added!'
           open={alertVisible}
-        >
-          <Alert
-            variant='filled'
-            severity='success'
-            sx={styles.Alert}
-          >
-            Course Added!
-          </Alert>
-        </Snackbar>
+        />
       )}
       {!formHidden && <SearchForm handleDisplayResults={handleDisplayResults} />}
-      {formHidden && <CourseList toggleSuccessAlert={toggleSuccessAlert} />}
+      {formHidden && <CourseList toggleSuccessAlert={togglePostSuccessAlert} />}
       {formHidden && (
         <Button
           variant='contained'

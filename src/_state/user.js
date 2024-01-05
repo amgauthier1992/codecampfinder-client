@@ -22,7 +22,7 @@ const userState = atom({
 
 const userCoursesState = atom({
   key: 'userCoursesState',
-  default: {},
+  default: [],
 });
 
 export { userState, userCoursesState };
