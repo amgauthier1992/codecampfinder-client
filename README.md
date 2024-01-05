@@ -1,4 +1,4 @@
-# CodeCampFinder Client
+# CodeCampFinder
 
 Find a coding bootcamp that's right for you. Search for coding bootcamps and their associated course offerings based on your location and individualized criteria.
 
@@ -6,7 +6,7 @@ This repo is the front-end client, built in React. You can see the app live at: 
 
 <!-- [https://codecampfinder.vercel.app/](https://codecampfinder.vercel.app/) -->
 
-To check out the app, you can use the demo account prior to creating an actual account.
+To check out the app, you can use the demo account below or create your own account.
 
 #### Demo Account Details
 
@@ -30,7 +30,7 @@ _Disclaimer_ - Information regarding bootcamps and courses, especially informati
 ![Home](https://i.imgur.com/Qc74KZD.png)
 ![Signup](https://i.imgur.com/JSkiqhA.png)
 ![Login](https://i.imgur.com/pjyLd8a.png)
-![Dashboard]()
+![Dashboard](https://i.imgur.com/qJbbgg9.png)
 ![Search](https://i.imgur.com/gHEPwVt.png)
 ![Results](https://i.imgur.com/mpOtkB4.png)
 
@@ -39,9 +39,9 @@ _Disclaimer_ - Information regarding bootcamps and courses, especially informati
 #### Front End
 
 - React
-- Recoil
-- Material UI
-- React-hook-form
+- Recoil (State Management)
+- Material UI (CSS-in-JS framework)
+- React-hook-form (Forms & Validation)
 
 #### Testing
 
@@ -61,4 +61,4 @@ This is only the front end client, so to develop locally you'll need the backend
 
 To get the backend up and running see [https://github.com/amgauthier1992/codecampfinder-api](https://github.com/amgauthier1992/codecampfinder-api)
 
-Deployments are handled through Vercel (formerly known as Zeit) and can be run via `npm run deploy`
+Deployments are handled through Vercel and can be run via `npm run deploy`

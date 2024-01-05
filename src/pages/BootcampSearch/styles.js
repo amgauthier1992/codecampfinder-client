@@ -1,8 +1,4 @@
 const styles = {
-  Alert: () => ({
-    width: '100%',
-    borderRadius: '10px'
-  }),
   BackToSearchBtn: () => ({
     display: 'block',
     marginLeft: 'auto',

@@ -2,13 +2,14 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 import { Routes, Route } from 'react-router-dom';
 import { Alert } from './components/Alert';
 import PrivateRoute from './components/PrivateRoute';
+import BootcampSearch from './pages/BootcampSearch';
 import Dashboard from './pages/Dashboard';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import NotFound from './pages/NotFound';
 import SignUp from './pages/SignUp';
+import UserCourses from './pages/UserCourses';
 import Unauthorized from './pages/Unauthorized';
-import BootcampSearch from './pages/BootcampSearch';
 import theme from './theme';
 
 const App = () => {
@@ -43,15 +44,7 @@ const App = () => {
             index
             element={
               <PrivateRoute>
-                <>My Courses</>
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path='courses/:courseId'
-            element={
-              <PrivateRoute>
-                <>Course ABC</>
+                <UserCourses />
               </PrivateRoute>
             }
           />
