@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './styles';
 import UserCourseListItem from '../UserCourseListItem';
 
-const UserCoursesList = ({ toggleDeleteSuccessAlert, userCourses }) => {
+const UserCoursesList = ({ toggleCourseDetailsModal, toggleDeleteSuccessAlert, userCourses }) => {
   const userCoursesCopy = [...userCourses];
   const sortedCourses = userCoursesCopy.sort((a, b) => {
     return a.Bootcamp.localeCompare(b.Bootcamp);
@@ -21,6 +21,7 @@ const UserCoursesList = ({ toggleDeleteSuccessAlert, userCourses }) => {
           sx={styles.GridItem}
         >
           <UserCourseListItem
+            toggleCourseDetailsModal={toggleCourseDetailsModal}
             toggleDeleteSuccessAlert={toggleDeleteSuccessAlert}
             userCourse={userCourse}
           />
@@ -33,6 +34,7 @@ const UserCoursesList = ({ toggleDeleteSuccessAlert, userCourses }) => {
 export default UserCoursesList;
 
 UserCoursesList.propTypes = {
+  toggleCourseDetailsModal: PropTypes.func.isRequired,
   toggleDeleteSuccessAlert: PropTypes.func.isRequired,
   userCourses: PropTypes.arrayOf(
     PropTypes.shape({

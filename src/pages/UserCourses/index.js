@@ -1,22 +1,32 @@
 import { CircularProgress, Typography } from '@mui/material';
-import { userCoursesState, userState } from '../../_state/user';
+import { currentUserCourseState, userCoursesState, userState } from '../../_state/user';
 import { useCallback, useEffect, useState } from 'react';
-import { useRecoilValue } from 'recoil';
+import { useRecoilState, useRecoilValue } from 'recoil';
 import { useDeleteUserCourse, useGetUserCourses } from '../../_actions/users.actions';
 import Snackbar from '../../components/Snackbar';
 import UserCoursesList from '../../components/UserCoursesList';
+import UserCourseDetails from '../../components/UserCourseDetails';
 import styles from './styles';
 
 const UserCourses = () => {
   const { loaded } = useGetUserCourses();
   const { loading } = useDeleteUserCourse();
   const [alertVisible, setAlertVisible] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
   const user = useRecoilValue(userState);
   const userCourses = useRecoilValue(userCoursesState);
+  const [currentCourse, setCurrentUserCourse] = useRecoilState(currentUserCourseState);
 
   const toggleDeleteSuccessAlert = useCallback(() => {
     setAlertVisible(true);
   }, []);
+
+  const toggleCourseDetailsModal = useCallback(() => {
+    if (modalOpen) {
+      setCurrentUserCourse(null);
+    }
+    setModalOpen(!modalOpen);
+  }, [modalOpen, setCurrentUserCourse]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -62,6 +72,7 @@ const UserCourses = () => {
       {(!loaded || loading) && <CircularProgress />}
       {loaded && userCourses?.length > 0 && (
         <UserCoursesList
+          toggleCourseDetailsModal={toggleCourseDetailsModal}
           toggleDeleteSuccessAlert={toggleDeleteSuccessAlert}
           userCourses={userCourses}
         />
@@ -74,6 +85,11 @@ const UserCourses = () => {
           No courses to display
         </Typography>
       )}
+      <UserCourseDetails
+        currentCourse={currentCourse}
+        handleClose={toggleCourseDetailsModal}
+        open={modalOpen}
+      />
     </>
   );
 };

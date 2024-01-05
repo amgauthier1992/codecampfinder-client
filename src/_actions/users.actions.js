@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import { sessionState } from '../_state/session';
-import { userState, userCoursesState } from '../_state/user';
+import { userState, userCoursesState, currentUserCourseState } from '../_state/user';
 import { API_URLS } from './_api-urls';
 import { useAlertActions } from './alert.actions';
 import { useNavigate } from 'react-router';
@@ -142,6 +142,53 @@ export function useGetUserCourses() {
   }, []);
 
   return { loaded };
+}
+
+export function useGetUserCourseDetails() {
+  const navigate = useNavigate();
+  const alertActions = useAlertActions();
+  const setCurrentUserCourse = useSetRecoilState(currentUserCourseState);
+  const setSession = useSetRecoilState(sessionState);
+  const setUser = useSetRecoilState(userState);
+  const [loaded, setLoaded] = useState(false);
+
+  const get = useCallback(async (courseId, bootcamp, onSuccess) => {
+    const url = `${API_URLS.User}/course/${courseId}`;
+    const token = JSON.parse(localStorage.getItem('session')).token;
+
+    setLoaded(true);
+
+    try {
+      const response = await axios.get(url, {
+        headers: {
+          'content-type': 'application/json',
+          authorization: `Bearer ${token}`
+        }
+      });
+
+      if (response?.data) {
+        response.data.Course.bootcamp = bootcamp;
+      }
+
+      setLoaded(false);
+      setCurrentUserCourse(response?.data);
+      onSuccess();
+    } catch (err) {
+      setLoaded(false);
+
+      if (err?.response?.status === 401) {
+        //clear stale state data and navigate to /unauthorized route to force user to (re)authenticate
+        setSession(null);
+        setUser(null);
+        navigate('/unauthorized');
+      } else {
+        alertActions.error('An error occurred', err.response, err.message, err.request);
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  return { loaded, get };
 }
 
 export function useDeleteUserCourse() {
