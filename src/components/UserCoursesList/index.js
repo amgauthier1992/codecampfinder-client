@@ -40,7 +40,7 @@ UserCoursesList.propTypes = {
     PropTypes.shape({
       Bootcamp: PropTypes.string,
       Course: PropTypes.string,
-      CourseId: PropTypes.number
-    })
-  )
+      CourseId: PropTypes.number,
+    }),
+  ),
 };

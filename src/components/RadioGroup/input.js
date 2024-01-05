@@ -16,10 +16,10 @@ export default RadioInput;
 
 RadioInput.defaultProps = {
   color: 'primary',
-  size: 'medium'
+  size: 'medium',
 };
 
 RadioInput.propTypes = {
   color: PropTypes.oneOf(['primary', 'secondary', 'success', 'error', 'info', 'warning']),
-  size: PropTypes.oneOf(['small', 'medium', 'large'])
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
 };

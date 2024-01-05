@@ -6,8 +6,8 @@ const styles = {
     marginTop: 'auto',
     padding: '1rem',
     position: 'fixed',
-    width: '100%'
-  })
+    width: '100%',
+  }),
 };
 
 export default styles;

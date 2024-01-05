@@ -6,7 +6,7 @@ import {
   Link,
   Stack,
   TextField,
-  Typography
+  Typography,
 } from '@mui/material';
 import { useForm, Controller } from 'react-hook-form';
 import { Link as ReactRouterLink, useNavigate } from 'react-router-dom';
@@ -32,7 +32,7 @@ const SignUpForm = () => {
       e.preventDefault();
       post(data, handleRedirectToLogin);
     },
-    [handleRedirectToLogin, post]
+    [handleRedirectToLogin, post],
   );
 
   return (
@@ -85,10 +85,10 @@ const SignUpForm = () => {
                 variant='outlined'
                 value={value}
                 InputLabelProps={{
-                  shrink: true
+                  shrink: true,
                 }}
                 InputProps={{
-                  endAdornment: <BadgeIcon color='primary' />
+                  endAdornment: <BadgeIcon color='primary' />,
                 }}
                 error={!!error}
                 helperText={error ? error.message : null}
@@ -112,10 +112,10 @@ const SignUpForm = () => {
                 variant='outlined'
                 value={value}
                 InputLabelProps={{
-                  shrink: true
+                  shrink: true,
                 }}
                 InputProps={{
-                  endAdornment: <BadgeIcon color='primary' />
+                  endAdornment: <BadgeIcon color='primary' />,
                 }}
                 error={!!error}
                 helperText={error ? error.message : null}
@@ -139,10 +139,10 @@ const SignUpForm = () => {
                 variant='outlined'
                 value={value}
                 InputLabelProps={{
-                  shrink: true
+                  shrink: true,
                 }}
                 InputProps={{
-                  endAdornment: <PersonIcon color='primary' />
+                  endAdornment: <PersonIcon color='primary' />,
                 }}
                 error={!!error}
                 helperText={error ? error.message : null}
@@ -150,7 +150,7 @@ const SignUpForm = () => {
             )}
             rules={{
               required: 'Username is required',
-              maxLength: { value: 20, message: 'Username cannot exceed 20 characters' }
+              maxLength: { value: 20, message: 'Username cannot exceed 20 characters' },
             }}
           />
         </Grid>
@@ -169,10 +169,10 @@ const SignUpForm = () => {
                 variant='outlined'
                 value={value}
                 InputLabelProps={{
-                  shrink: true
+                  shrink: true,
                 }}
                 InputProps={{
-                  endAdornment: <KeyOutlinedIcon color='primary' />
+                  endAdornment: <KeyOutlinedIcon color='primary' />,
                 }}
                 error={!!error}
                 helperText={
@@ -188,11 +188,11 @@ const SignUpForm = () => {
               minLength: { value: 8, message: 'Password must be at least 8 characters in length' },
               pattern: {
                 value: new RegExp(
-                  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+                  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
                 ),
                 message:
-                  'Password must have a minimum of 8 characters with at least 1 uppercase, 1 lowercase, 1 number, and 1 special character'
-              }
+                  'Password must have a minimum of 8 characters with at least 1 uppercase, 1 lowercase, 1 number, and 1 special character',
+              },
             }}
           />
         </Grid>

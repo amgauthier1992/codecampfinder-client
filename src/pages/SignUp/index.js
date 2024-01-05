@@ -6,7 +6,7 @@ import './styles.css';
 
 const imageStyles = {
   width: '675px',
-  height: '675px'
+  height: '675px',
 };
 
 const SignUp = () => {

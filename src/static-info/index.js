@@ -2,24 +2,24 @@ export const YES_NO = [
   {
     id: 1,
     value: true,
-    label: 'Yes'
+    label: 'Yes',
   },
   {
     id: 2,
     value: false,
-    label: 'No'
-  }
+    label: 'No',
+  },
 ];
 
 export const COURSE_SCHEDULE_OPTIONS = [
   {
     label: 'Full-time (40+ hrs/week)',
-    value: 'full_time'
+    value: 'full_time',
   },
   {
     label: 'Part-time (~25 hrs/week)',
-    value: 'part_time'
-  }
+    value: 'part_time',
+  },
 ];
 
 export const STATES = [
@@ -73,28 +73,28 @@ export const STATES = [
   { label: 'Washington', value: 'WA' },
   { label: 'West Virginia', value: 'WV' },
   { label: 'Wisconsin', value: 'WI' },
-  { label: 'Wyoming', value: 'WY' }
+  { label: 'Wyoming', value: 'WY' },
 ];
 
 export const WEBSITES = {
-  Actualize: 'http://anyonecanlearntocode.com/',
+  'Actualize': 'http://anyonecanlearntocode.com/',
   'App Academy': 'https://www.appacademy.io/',
   'Code Fellows': 'https://www.codefellows.org/',
   'Code Platoon': 'https://www.codeplatoon.org/',
   'Coder Foundry': 'https://www.coderfoundry.com/',
-  Codesmith: 'https://codesmith.io/#',
+  'Codesmith': 'https://codesmith.io/#',
   'Coding Temple': 'https://www.codingtemple.com',
-  devCodeCamp: 'https://devcodecamp.com/',
-  DigitalCrafts: 'https://www.digitalcrafts.com/',
-  Epicodus: 'https://www.epicodus.com/',
+  'devCodeCamp': 'https://devcodecamp.com/',
+  'DigitalCrafts': 'https://www.digitalcrafts.com/',
+  'Epicodus': 'https://www.epicodus.com/',
   'First Step Coding': 'https://www.firststepcoding.com/',
   'Fullstack Academy': 'https://www.fullstackacademy.com/',
   'General Assembly': 'https://generalassemb.ly/',
-  Ironhack: 'https://www.ironhack.com/en',
+  'Ironhack': 'https://www.ironhack.com/en',
   'Kickstart Coding': 'https://www.kickstartcoding.com/',
   'Noble Desktop': 'https://www.nobledesktop.com/',
   'Rithm School': 'https://www.rithmschool.com/',
   'The Software Guild': 'https://www.thesoftwareguild.com/',
-  Thinkful: 'https://www.thinkful.com/',
-  'Tech Academy': 'https://www.learncodinganywhere.com/'
+  'Thinkful': 'https://www.thinkful.com/',
+  'Tech Academy': 'https://www.learncodinganywhere.com/',
 };

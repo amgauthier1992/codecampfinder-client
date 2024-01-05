@@ -5,7 +5,7 @@ import {
   FormHelperText,
   MenuItem,
   Select as MUISelect,
-  Typography
+  Typography,
 } from '@mui/material';
 import { useCallback } from 'react';
 import PropTypes from 'prop-types';
@@ -49,7 +49,7 @@ function Select({ error, onChange, options, value, placeholder, multiple, ...oth
 
       return selected;
     },
-    [placeholder, options, multiple]
+    [placeholder, options, multiple],
   );
 
   if (!options.length) return null;
@@ -67,7 +67,7 @@ function Select({ error, onChange, options, value, placeholder, multiple, ...oth
         renderValue={setSelectRenderValues}
         sx={multiple ? styles.SelectMultiple : styles.Select}
         MenuProps={{
-          sx: styles.SelectMenu
+          sx: styles.SelectMenu,
         }}
         {...other}
       >
@@ -92,7 +92,7 @@ Select.defaultProps = {
   value: '',
   placeholder: '',
   multiple: false,
-  size: 'medium'
+  size: 'medium',
 };
 
 Select.propTypes = {
@@ -100,15 +100,15 @@ Select.propTypes = {
     PropTypes.bool,
     PropTypes.shape({
       message: PropTypes.string,
-      type: PropTypes.string
-    })
+      type: PropTypes.string,
+    }),
   ]),
   onChange: PropTypes.func.isRequired,
   options: PropTypes.arrayOf(
     PropTypes.shape({
       value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-      label: PropTypes.string.isRequired
-    })
+      label: PropTypes.string.isRequired,
+    }),
   ),
   placeholder: PropTypes.string,
   value: PropTypes.oneOfType([
@@ -116,10 +116,10 @@ Select.propTypes = {
     PropTypes.number,
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.arrayOf(PropTypes.number),
-    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number]))
+    PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
   ]),
   multiple: PropTypes.bool,
-  size: PropTypes.string
+  size: PropTypes.string,
 };
 
 export default Select;

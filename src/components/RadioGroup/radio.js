@@ -26,7 +26,7 @@ Radio.defaultProps = {
   disabled: false,
   label: 'initial',
   size: 'medium',
-  value: 'initial'
+  value: 'initial',
 };
 
 Radio.propTypes = {
@@ -34,5 +34,5 @@ Radio.propTypes = {
   disabled: PropTypes.bool,
   label: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  value: PropTypes.oneOfType([PropTypes.node, PropTypes.bool])
+  value: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),
 };

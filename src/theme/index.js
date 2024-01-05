@@ -8,7 +8,7 @@ const theme = createTheme({
   breakpoints,
   components,
   palette,
-  typography
+  typography,
 });
 
 export default theme;

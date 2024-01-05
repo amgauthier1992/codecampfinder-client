@@ -1,7 +1,7 @@
 const styles = {
   FormHelperText: () => ({
-    marginLeft: '12px'
-  })
+    marginLeft: '12px',
+  }),
 };
 
 export default styles;

@@ -65,11 +65,11 @@ const UserMenu = ({ anchorEl, handleClose, open }) => {
 export default UserMenu;
 
 UserMenu.defaultProps = {
-  open: false
+  open: false,
 };
 
 UserMenu.propTypes = {
   anchorEl: PropTypes.any,
   handleClose: PropTypes.func.isRequired,
-  open: PropTypes.bool
+  open: PropTypes.bool,
 };

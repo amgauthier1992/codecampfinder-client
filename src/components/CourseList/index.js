@@ -45,5 +45,5 @@ const CourseList = ({ toggleSuccessAlert }) => {
 export default CourseList;
 
 CourseList.propTypes = {
-  toggleSuccessAlert: PropTypes.func.isRequired
+  toggleSuccessAlert: PropTypes.func.isRequired,
 };

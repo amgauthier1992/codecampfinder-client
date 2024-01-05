@@ -7,8 +7,8 @@ const styles = {
     borderRadius: '25px',
     height: '55px',
     width: '165px',
-    fontWeight: 700
-  })
+    fontWeight: 700,
+  }),
 };
 
 export default styles;

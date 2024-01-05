@@ -5,9 +5,9 @@ const alertAtom = atom({
   default: {
     error: {
       response: {},
-      message: ''
-    }
-  }
+      message: '',
+    },
+  },
 });
 
 export { alertAtom };

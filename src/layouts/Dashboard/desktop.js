@@ -22,7 +22,7 @@ export default function DashboardDesktop() {
         navigate(location);
       }
     },
-    [logout, navigate]
+    [logout, navigate],
   );
 
   return (

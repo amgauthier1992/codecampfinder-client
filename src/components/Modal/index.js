@@ -19,7 +19,7 @@ const component = ({
   secondaryBtnColor,
   secondaryBtnIcon,
   secondaryBtnTitle,
-  secondaryBtnVariant
+  secondaryBtnVariant,
 }) => {
   return (
     <MUIModal
@@ -29,8 +29,8 @@ const component = ({
       slots={{ backdrop: Backdrop }}
       slotProps={{
         backdrop: {
-          sx: styles.Backdrop
-        }
+          sx: styles.Backdrop,
+        },
       }}
     >
       <Fade in={open}>
@@ -96,7 +96,7 @@ Modal.defaultProps = {
   secondaryBtnColor: 'secondary',
   secondaryBtnIcon: null, //false?
   secondaryBtnTitle: '',
-  secondaryBtnVariant: 'outlined'
+  secondaryBtnVariant: 'outlined',
 };
 
 Modal.propTypes = {
@@ -116,9 +116,9 @@ Modal.propTypes = {
     'success',
     'error',
     'info',
-    'warning'
+    'warning',
   ]),
   secondaryBtnIcon: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),
   secondaryBtnTitle: PropTypes.string,
-  secondaryBtnVariant: PropTypes.oneOf(['contained', 'outlined', 'text'])
+  secondaryBtnVariant: PropTypes.oneOf(['contained', 'outlined', 'text']),
 };

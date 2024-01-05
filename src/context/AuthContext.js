@@ -25,7 +25,7 @@ export const AuthProvider = ({ children }) => {
 
     try {
       const response = await axios.post(url, body, {
-        headers: { 'content-type': 'application/json' }
+        headers: { 'content-type': 'application/json' },
       });
 
       if (response?.data && Object.keys(response?.data).length) {
@@ -33,7 +33,7 @@ export const AuthProvider = ({ children }) => {
         setUser({
           username: response.data.username,
           firstName: response.data.firstName,
-          lastName: response.data.lastName
+          lastName: response.data.lastName,
         });
         setSession({ token: response.data.token, isAuthenticated: true });
         onSuccess();

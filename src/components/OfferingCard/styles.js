@@ -6,12 +6,12 @@ const styles = {
       marginTop: '1rem',
       marginBottom: '1rem',
       [breakpoints.up('xl')]: {
-        marginTop: '0.75rem'
-      }
-    }
+        marginTop: '0.75rem',
+      },
+    },
   }),
   Bootcamp: () => ({
-    textDecoration: 'none'
+    textDecoration: 'none',
   }),
   Card: ({ breakpoints }) => ({
     boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px;',
@@ -21,43 +21,43 @@ const styles = {
       margin: '16px 16px 16px 0px',
       minHeight: '350px',
       maxHeight: '350px',
-      overflowY: 'auto'
-    }
+      overflowY: 'auto',
+    },
   }),
   CardContent: () => ({
-    padding: '16px 0px 0px 0px'
+    padding: '16px 0px 0px 0px',
   }),
   CardLogo: ({ breakpoints }) => ({
     height: '40px',
     width: '40px',
     [breakpoints.up('md')]: {
       height: '50px',
-      width: '50px'
+      width: '50px',
     },
     [breakpoints.up('xl')]: {
       height: '60px',
-      width: '60px'
-    }
+      width: '60px',
+    },
   }),
   DetailWithIcon: () => ({
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   }),
   DetailIcon: () => ({
     '&.MuiListItemIcon-root': {
-      marginLeft: '5px'
-    }
+      marginLeft: '5px',
+    },
   }),
   GridItem: () => ({
-    padding: '8px'
+    padding: '8px',
   }),
   GridItemHeader: () => ({
-    paddingBottom: '8px'
+    paddingBottom: '8px',
   }),
   RepaymentGuarantee: () => ({
     display: 'flex',
-    alignItems: 'flex-start'
-  })
+    alignItems: 'flex-start',
+  }),
 };
 
 export default styles;

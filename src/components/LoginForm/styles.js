@@ -1,12 +1,12 @@
 const styles = {
   Backdrop: () => ({
     color: '#fff',
-    zIndex: 100
+    zIndex: 100,
   }),
   GridItem: () => ({
     '&.MuiGrid-item': {
-      paddingLeft: '0 !important'
-    }
+      paddingLeft: '0 !important',
+    },
   }),
   LoginBtn: () => ({
     display: 'block',
@@ -15,31 +15,31 @@ const styles = {
     borderRadius: '25px',
     fontWeight: 700,
     height: '55px',
-    width: '150px'
+    width: '150px',
   }),
   LogoIcon: ({ palette }) => ({
-    animation: 'rotateAnimation 5s linear infinite',
+    'animation': 'rotateAnimation 5s linear infinite',
     '@keyframes rotateAnimation': {
       from: { transform: 'rotate(0deg)' },
-      to: { transform: 'rotate(360deg)' }
+      to: { transform: 'rotate(360deg)' },
     },
-    color: palette.primary.main,
-    display: 'block',
-    fontSize: '4em',
-    marginLeft: 'auto',
-    marginRight: 'auto'
+    'color': palette.primary.main,
+    'display': 'block',
+    'fontSize': '4em',
+    'marginLeft': 'auto',
+    'marginRight': 'auto',
   }),
   LoginForm: ({ breakpoints }) => ({
     width: '100%',
     margin: 0,
     [breakpoints.up('sm')]: {
-      width: '350px'
-    }
+      width: '350px',
+    },
   }),
   LoginFormCtas: () => ({
     marginLeft: 'auto',
-    marginRight: 'auto'
-  })
+    marginRight: 'auto',
+  }),
 };
 
 export default styles;

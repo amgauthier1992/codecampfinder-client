@@ -7,7 +7,7 @@ import {
   Link,
   ListItemIcon,
   Stack,
-  Typography
+  Typography,
 } from '@mui/material';
 import { usePostUserCourse } from '../../_actions/users.actions';
 import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutlineOutlined';
@@ -29,11 +29,11 @@ const OfferingCard = ({ offering, toggleSuccessAlert }) => {
       const data = {
         Bootcamp: offering.Name,
         Course: courseName,
-        Schedule: courseSchedule
+        Schedule: courseSchedule,
       };
       post(data, handleSuccessAddCourse);
     },
-    [handleSuccessAddCourse, offering.Name, post]
+    [handleSuccessAddCourse, offering.Name, post],
   );
 
   return (
@@ -265,27 +265,27 @@ OfferingCard.propTypes = {
           Isa: PropTypes.bool,
           Placement_based: PropTypes.bool,
           Repayment_guarantee: PropTypes.bool,
-          Up_front: PropTypes.number
+          Up_front: PropTypes.number,
         }),
         Prior_experience: PropTypes.bool,
         Schedule: PropTypes.shape({
           Type: PropTypes.string,
           Hours: PropTypes.number,
-          Duration: PropTypes.number
+          Duration: PropTypes.number,
         }),
-        Solo_instruction: PropTypes.bool
-      })
+        Solo_instruction: PropTypes.bool,
+      }),
     ),
     Locations: PropTypes.arrayOf(
       PropTypes.shape({
         city: PropTypes.string,
-        state: PropTypes.string
-      })
+        state: PropTypes.string,
+      }),
     ),
     Name: PropTypes.string,
-    Website: PropTypes.string
+    Website: PropTypes.string,
   }).isRequired,
-  toggleSuccessAlert: PropTypes.func.isRequired
+  toggleSuccessAlert: PropTypes.func.isRequired,
 };
 
 //Model structure

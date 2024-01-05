@@ -13,18 +13,18 @@ const TOP_LINKS = [
   {
     title: 'My Courses',
     icon: <LibraryBooksOutlinedIcon sx={styles.MenuLinkIcon} />,
-    navigate: '/dashboard'
+    navigate: '/dashboard',
   },
   {
     title: 'Find Courses',
     icon: <SearchOutlinedIcon sx={styles.MenuLinkIcon} />,
-    navigate: '/dashboard/search'
+    navigate: '/dashboard/search',
   },
   {
     title: 'Comparison Tool (Coming Soon!)',
     icon: <BalanceOutlinedIcon sx={styles.MenuLinkIcon} />,
-    disabled: true
-  }
+    disabled: true,
+  },
 ];
 
 const BOTTOM_LINKS = [
@@ -36,8 +36,8 @@ const BOTTOM_LINKS = [
   {
     title: 'Logout',
     icon: <LogoutOutlinedIcon sx={styles.MenuLinkIcon} />,
-    navigate: 'login'
-  }
+    navigate: 'login',
+  },
 ];
 
 const MenuLinks = ({ handleClickMenuItem }) => {
@@ -45,7 +45,7 @@ const MenuLinks = ({ handleClickMenuItem }) => {
     (location) => {
       handleClickMenuItem(location);
     },
-    [handleClickMenuItem]
+    [handleClickMenuItem],
   );
 
   return (
@@ -96,5 +96,5 @@ const MenuLinks = ({ handleClickMenuItem }) => {
 export default MenuLinks;
 
 MenuLinks.propTypes = {
-  handleClickMenuItem: PropTypes.func.isRequired
+  handleClickMenuItem: PropTypes.func.isRequired,
 };

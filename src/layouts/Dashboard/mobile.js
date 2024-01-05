@@ -31,7 +31,7 @@ const DashboardMobile = () => {
         handleSidebarToggle();
       }
     },
-    [handleSidebarToggle, logout, navigate]
+    [handleSidebarToggle, logout, navigate],
   );
 
   return (
@@ -80,7 +80,7 @@ const DashboardMobile = () => {
         sx={styles.SidebarMobile}
         variant='temporary'
         ModalProps={{
-          keepMounted: true // Better open performance on mobile.
+          keepMounted: true, // Better open performance on mobile.
         }}
       >
         <Toolbar>
