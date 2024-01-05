@@ -39,7 +39,7 @@ export default RadioGroup;
 RadioGroup.defaultProps = {
   disabled: false,
   row: true,
-  value: DEFAULT_VALUE,
+  value: DEFAULT_VALUE
 };
 
 RadioGroup.propTypes = {
@@ -51,9 +51,9 @@ RadioGroup.propTypes = {
       color: PropTypes.oneOf(['primary', 'secondary', 'success', 'error', 'info', 'warning']),
       label: PropTypes.string,
       size: PropTypes.oneOf(['small', 'medium', 'large']),
-      value: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),
-    }),
+      value: PropTypes.oneOfType([PropTypes.node, PropTypes.bool])
+    })
   ).isRequired,
   row: PropTypes.bool,
-  value: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),
+  value: PropTypes.oneOfType([PropTypes.node, PropTypes.bool])
 };

@@ -7,7 +7,7 @@ import {
   DialogTitle,
   Grid,
   Stack,
-  Typography,
+  Typography
 } from '@mui/material';
 import { alertAtom } from '../../_state/alert';
 
@@ -31,7 +31,7 @@ function Alert() {
       open
       maxWidth='sm'
       PaperProps={{
-        sx: styles.DialogPaper,
+        sx: styles.DialogPaper
       }}
     >
       <DialogTitle>

@@ -20,8 +20,8 @@ export const useRegisterUser = () => {
     try {
       const response = await axios.post(url, body, {
         headers: {
-          'content-type': 'application/json',
-        },
+          'content-type': 'application/json'
+        }
       });
 
       setLoading(false);
@@ -55,8 +55,8 @@ export const usePostUserCourse = () => {
       const response = await axios.post(url, body, {
         headers: {
           'content-type': 'application/json',
-          'authorization': `Bearer ${token}`,
-        },
+          'authorization': `Bearer ${token}`
+        }
       });
 
       setLoading(false);
@@ -65,7 +65,7 @@ export const usePostUserCourse = () => {
       copyUserCourses.push({
         Bootcamp: data.Bootcamp,
         Course: data.Course,
-        CourseId: response?.data.course_id,
+        CourseId: response?.data.course_id
       });
 
       setUserCourses(copyUserCourses);
@@ -113,9 +113,9 @@ export function useGetUserCourses() {
         const response = await axios.get(url, {
           headers: {
             'content-type': 'application/json',
-            'authorization': `Bearer ${token}`,
+            'authorization': `Bearer ${token}`
           },
-          signal: signal,
+          signal: signal
         });
 
         setUserCourses(response.data);
@@ -162,8 +162,8 @@ export function useGetUserCourseDetails() {
       const response = await axios.get(url, {
         headers: {
           'content-type': 'application/json',
-          'authorization': `Bearer ${token}`,
-        },
+          'authorization': `Bearer ${token}`
+        }
       });
 
       if (response?.data) {
@@ -209,13 +209,13 @@ export function useDeleteUserCourse() {
       const response = await axios.delete(url, {
         headers: {
           'content-type': 'application/json',
-          'authorization': `Bearer ${token}`,
-        },
+          'authorization': `Bearer ${token}`
+        }
       });
 
       setLoading(false);
       setUserCourses((prevUserCourses) =>
-        prevUserCourses.filter((userCourse) => userCourse.CourseId !== courseId),
+        prevUserCourses.filter((userCourse) => userCourse.CourseId !== courseId)
       );
       onSuccess();
     } catch (err) {

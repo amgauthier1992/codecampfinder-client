@@ -12,12 +12,12 @@ function useAlertActions() {
           title: title || 'An error has occurred',
           response,
           message,
-          request,
+          request
         },
-        type: 'error',
+        type: 'error'
       });
     },
-    clear: resetAlert,
+    clear: resetAlert
   };
 }
 

@@ -1,7 +1,7 @@
 const styles = {
   EmptyResults: {
-    paddingTop: '10rem',
-  },
+    paddingTop: '10rem'
+  }
 };
 
 export default styles;

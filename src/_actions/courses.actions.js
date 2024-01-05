@@ -27,13 +27,13 @@ export const useSearchCourses = () => {
       const response = await axios.post(url, body, {
         headers: {
           'content-type': 'application/json',
-          'authorization': `Bearer ${token}`,
-        },
+          'authorization': `Bearer ${token}`
+        }
       });
 
       setLoading(false);
       setCourses({
-        offerings: response?.data,
+        offerings: response?.data
       });
       onSuccess();
     } catch (err) {

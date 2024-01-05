@@ -17,12 +17,12 @@ const SearchForm = ({ handleDisplayResults }) => {
       e.preventDefault();
       const body = {
         ...data,
-        fin_assist: true, //User should not be prevented from seeing courses if they select 'no financing'. Set fin_assist to always be true on the req.body
+        fin_assist: true //User should not be prevented from seeing courses if they select 'no financing'. Set fin_assist to always be true on the req.body
       };
       e.preventDefault();
       search(body, handleDisplayResults);
     },
-    [handleDisplayResults, search],
+    [handleDisplayResults, search]
   );
 
   return (
@@ -73,7 +73,7 @@ const SearchForm = ({ handleDisplayResults }) => {
                 />
               )}
               rules={{
-                required: 'Please select an option for a type of schedule',
+                required: 'Please select an option for a type of schedule'
               }}
             />
           </Stack>
@@ -107,7 +107,7 @@ const SearchForm = ({ handleDisplayResults }) => {
                 />
               )}
               rules={{
-                required: 'Please select a preference for in-person or remote learning',
+                required: 'Please select a preference for in-person or remote learning'
               }}
             />
           </Stack>
@@ -141,7 +141,7 @@ const SearchForm = ({ handleDisplayResults }) => {
                 />
               )}
               rules={{
-                required: 'Please select if you have any prior programming experience',
+                required: 'Please select if you have any prior programming experience'
               }}
             />
           </Stack>
@@ -177,7 +177,7 @@ const SearchForm = ({ handleDisplayResults }) => {
                 />
               )}
               rules={{
-                required: 'Please select an option for the type of course schedule',
+                required: 'Please select an option for the type of course schedule'
               }}
             />
           </Stack>
@@ -214,7 +214,7 @@ const SearchForm = ({ handleDisplayResults }) => {
               )}
               rules={{
                 required:
-                  'Please select if you anticipate financing or require financial assistance',
+                  'Please select if you anticipate financing or require financial assistance'
               }}
             />
           </Stack>
@@ -241,5 +241,5 @@ const SearchForm = ({ handleDisplayResults }) => {
 export default SearchForm;
 
 SearchForm.propTypes = {
-  handleDisplayResults: PropTypes.func.isRequired,
+  handleDisplayResults: PropTypes.func.isRequired
 };

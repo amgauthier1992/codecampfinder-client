@@ -2,24 +2,24 @@ export const YES_NO = [
   {
     id: 1,
     value: true,
-    label: 'Yes',
+    label: 'Yes'
   },
   {
     id: 2,
     value: false,
-    label: 'No',
-  },
+    label: 'No'
+  }
 ];
 
 export const COURSE_SCHEDULE_OPTIONS = [
   {
     label: 'Full-time (40+ hrs/week)',
-    value: 'full_time',
+    value: 'full_time'
   },
   {
     label: 'Part-time (~25 hrs/week)',
-    value: 'part_time',
-  },
+    value: 'part_time'
+  }
 ];
 
 export const STATES = [
@@ -73,7 +73,7 @@ export const STATES = [
   { label: 'Washington', value: 'WA' },
   { label: 'West Virginia', value: 'WV' },
   { label: 'Wisconsin', value: 'WI' },
-  { label: 'Wyoming', value: 'WY' },
+  { label: 'Wyoming', value: 'WY' }
 ];
 
 export const WEBSITES = {
@@ -96,5 +96,5 @@ export const WEBSITES = {
   'Rithm School': 'https://www.rithmschool.com/',
   'The Software Guild': 'https://www.thesoftwareguild.com/',
   'Thinkful': 'https://www.thinkful.com/',
-  'Tech Academy': 'https://www.learncodinganywhere.com/',
+  'Tech Academy': 'https://www.learncodinganywhere.com/'
 };

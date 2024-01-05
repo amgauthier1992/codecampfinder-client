@@ -5,7 +5,7 @@ import {
   CardContent,
   CardMedia,
   Stack,
-  Typography,
+  Typography
 } from '@mui/material';
 import { useDeleteUserCourse, useGetUserCourseDetails } from '../../_actions/users.actions';
 import { useCallback } from 'react';
@@ -31,7 +31,7 @@ const UserCourseListItem = ({ toggleCourseDetailsModal, toggleDeleteSuccessAlert
         <CardMedia
           sx={styles.CardLogo}
           image={require(
-            `../../images/logos/${userCourse.Bootcamp.toLowerCase().replace(/\s+/g, '-')}.png`,
+            `../../images/logos/${userCourse.Bootcamp.toLowerCase().replace(/\s+/g, '-')}.png`
           )}
           title={userCourse.Bootcamp}
         />
@@ -78,6 +78,6 @@ UserCourseListItem.propTypes = {
   userCourse: PropTypes.shape({
     Bootcamp: PropTypes.string,
     Course: PropTypes.string,
-    CourseId: PropTypes.number,
-  }),
+    CourseId: PropTypes.number
+  })
 };

@@ -23,10 +23,10 @@ const Snackbar = ({ message, open }) => {
 export default Snackbar;
 
 Snackbar.defaultProps = {
-  open: false,
+  open: false
 };
 
 Snackbar.propTypes = {
   message: PropTypes.string.isRequired,
-  open: PropTypes.bool,
+  open: PropTypes.bool
 };

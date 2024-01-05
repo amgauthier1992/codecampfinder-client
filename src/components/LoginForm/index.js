@@ -6,7 +6,7 @@ import {
   Link,
   Stack,
   TextField,
-  Typography,
+  Typography
 } from '@mui/material';
 import { useForm, Controller } from 'react-hook-form';
 import { useCallback } from 'react';
@@ -32,7 +32,7 @@ const LoginForm = () => {
       e.preventDefault();
       login(data, handleRedirectToDashboard);
     },
-    [handleRedirectToDashboard, login],
+    [handleRedirectToDashboard, login]
   );
 
   return (
@@ -86,17 +86,17 @@ const LoginForm = () => {
                 variant='outlined'
                 value={value}
                 InputLabelProps={{
-                  shrink: true,
+                  shrink: true
                 }}
                 InputProps={{
-                  endAdornment: <PersonIcon color='primary' />,
+                  endAdornment: <PersonIcon color='primary' />
                 }}
                 error={!!error}
                 helperText={error ? error.message : null}
               />
             )}
             rules={{
-              required: 'Username is required',
+              required: 'Username is required'
             }}
           />
         </Grid>
@@ -116,10 +116,10 @@ const LoginForm = () => {
                 variant='outlined'
                 value={value}
                 InputLabelProps={{
-                  shrink: true,
+                  shrink: true
                 }}
                 InputProps={{
-                  endAdornment: <KeyOutlinedIcon color='primary' />,
+                  endAdornment: <KeyOutlinedIcon color='primary' />
                 }}
                 error={!!error}
                 helperText={error ? error.message : null}
@@ -127,7 +127,7 @@ const LoginForm = () => {
               />
             )}
             rules={{
-              required: 'Password is required',
+              required: 'Password is required'
             }}
           />
         </Grid>
