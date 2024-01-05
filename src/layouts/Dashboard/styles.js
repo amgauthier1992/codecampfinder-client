@@ -69,8 +69,8 @@ const styles = {
     }
   }),
   SidebarDesktop: ({ palette }) => ({
-    width: '275px',
-    flexShrink: 0,
+    'width': '275px',
+    'flexShrink': 0,
     '& .MuiDrawer-paper': {
       width: '275px',
       backgroundColor: palette.primary.main

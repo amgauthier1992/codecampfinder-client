@@ -55,7 +55,7 @@ export const usePostUserCourse = () => {
       const response = await axios.post(url, body, {
         headers: {
           'content-type': 'application/json',
-          authorization: `Bearer ${token}`
+          'authorization': `Bearer ${token}`
         }
       });
 
@@ -113,7 +113,7 @@ export function useGetUserCourses() {
         const response = await axios.get(url, {
           headers: {
             'content-type': 'application/json',
-            authorization: `Bearer ${token}`
+            'authorization': `Bearer ${token}`
           },
           signal: signal
         });
@@ -162,7 +162,7 @@ export function useGetUserCourseDetails() {
       const response = await axios.get(url, {
         headers: {
           'content-type': 'application/json',
-          authorization: `Bearer ${token}`
+          'authorization': `Bearer ${token}`
         }
       });
 
@@ -209,7 +209,7 @@ export function useDeleteUserCourse() {
       const response = await axios.delete(url, {
         headers: {
           'content-type': 'application/json',
-          authorization: `Bearer ${token}`
+          'authorization': `Bearer ${token}`
         }
       });
 

@@ -16,7 +16,7 @@ const BUTTONS = [
     props: { size: 'small' },
     style: {
       ...BUTTON_BASE_STYLES,
-      minHeight: '30px',
+      'minHeight': '30px',
       //fontSize prop doesn't work as expected for MUI Icons and Icons seemingly don't inherit fontSize from the parent, so this allows us to scale the icon fontSize with the Button parent fontSize:
       //https://github.com/mui/material-ui/issues/25829 / https://github.com/mui/material-ui/issues/28917
       '& .MuiButton-iconSizeSmall > :nth-of-type(1)': {
@@ -29,7 +29,7 @@ const BUTTONS = [
     props: { size: 'medium' },
     style: {
       ...BUTTON_BASE_STYLES,
-      minHeight: '40px',
+      'minHeight': '40px',
       '& .MuiButton-iconSizeMedium > :nth-of-type(1)': {
         fontSize: '17px'
       }
@@ -40,8 +40,8 @@ const BUTTONS = [
     props: { size: 'large' },
     style: {
       ...BUTTON_BASE_STYLES,
-      minHeight: '56px',
-      lineHeight: '1.625rem',
+      'minHeight': '56px',
+      'lineHeight': '1.625rem',
       '& .MuiButton-iconSizeLarge > :nth-of-type(1)': {
         fontSize: '18px'
       }

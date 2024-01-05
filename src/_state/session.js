@@ -17,7 +17,7 @@ const localStorageSync = (key) => ({ setSelf, onSet }) => {
 const sessionState = atom({
   key: 'sessionState',
   default: {},
-  effects: [localStorageSync('session')]
+  effects: [localStorageSync('session')],
 });
 
 const isAuthenticatedState = selector({

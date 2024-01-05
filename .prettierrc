@@ -1,27 +1,12 @@
 {
-  "endOfLine": "auto",
-  "importOrder": [
-    "<THIRD_PARTY_MODULES>",
-    "interface",
-    "(?=content|api)",
-    "context/",
-    "mock/",
-    "config",
-    "utils/",
-    "hooks/",
-    "(components/|./index)",
-    ".svg",
-    "^../(.*)$",
-    "(?=./styles.module.scss)"
-  ],
-  "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true,
-  "jsxBracketSameLine": false,
-  "jsxSingleQuote": true,
-  "printWidth": 100,
+  "endOfLine": "crlf",
   "semi": true,
-  "singleAttributePerLine": true,
   "singleQuote": true,
-  "tabWidth": 2,
-  "trailingComma": "none"
+  "jsxSingleQuote": true,
+  "arrowParens": "always",
+  "trailingComma": "none",
+  "quoteProps": "consistent",
+  "printWidth": 100,
+  "singleAttributePerLine": true,
+  "bracketSpacing": true
 }

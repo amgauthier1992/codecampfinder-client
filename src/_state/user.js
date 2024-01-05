@@ -17,7 +17,7 @@ const localStorageSync = (key) => ({ setSelf, onSet }) => {
 const userState = atom({
   key: 'userState',
   default: {},
-  effects: [localStorageSync('user')]
+  effects: [localStorageSync('user')],
 });
 
 const userCoursesState = atom({
@@ -27,7 +27,7 @@ const userCoursesState = atom({
 
 const currentUserCourseState = atom({
   key: 'currentUserCourseState',
-  default: {}
+  default: {},
 });
 
 export { currentUserCourseState, userState, userCoursesState };

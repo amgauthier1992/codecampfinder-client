@@ -21,8 +21,8 @@ const styles = {
     textAlign: 'center'
   },
   TitleIcon: {
-    fontSize: '6rem',
-    lineHeight: 0,
+    'fontSize': '6rem',
+    'lineHeight': 0,
     '> svg': {
       fontSize: 'inherit'
     }

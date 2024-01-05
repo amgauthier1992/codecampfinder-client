@@ -27,7 +27,7 @@ export const useSearchCourses = () => {
       const response = await axios.post(url, body, {
         headers: {
           'content-type': 'application/json',
-          authorization: `Bearer ${token}`
+          'authorization': `Bearer ${token}`
         }
       });
 

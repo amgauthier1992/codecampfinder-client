@@ -15,14 +15,14 @@ const styles = {
     left: '10px'
   }),
   ModalBox: ({ palette, breakpoints }) => ({
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    backgroundColor: palette.common.white,
-    borderRadius: '16px',
-    boxShadow: '0px 4px 20px rgba(0, 16, 101, 0.27)',
-    padding: '12px 24px 24px 24px',
+    'position': 'absolute',
+    'top': '50%',
+    'left': '50%',
+    'transform': 'translate(-50%, -50%)',
+    'backgroundColor': palette.common.white,
+    'borderRadius': '16px',
+    'boxShadow': '0px 4px 20px rgba(0, 16, 101, 0.27)',
+    'padding': '12px 24px 24px 24px',
     '&:focus': {
       outline: 'none'
     },
@@ -48,7 +48,7 @@ const styles = {
     }
   }),
   ModalControls: () => ({
-    paddingTop: '1.5rem',
+    'paddingTop': '1.5rem',
     '& .MuiButtonBase-root': {
       minHeight: '48px',
       flex: 1

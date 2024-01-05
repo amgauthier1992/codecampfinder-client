@@ -24,10 +24,10 @@ const styles = {
     }
   }),
   Cta: () => ({
-    borderRadius: '25px',
-    fontWeight: 700,
-    height: '55px',
-    width: '150px',
+    'borderRadius': '25px',
+    'fontWeight': 700,
+    'height': '55px',
+    'width': '150px',
     '&.MuiButtonBase-root': { marginTop: '2rem' }
   }),
   Image: ({ breakpoints }) => ({

@@ -2,7 +2,7 @@ import { atom, selectorFamily } from 'recoil';
 
 const coursesState = atom({
   key: 'coursesState',
-  default: {}
+  default: {},
 });
 
 const fetchCourses = selectorFamily({

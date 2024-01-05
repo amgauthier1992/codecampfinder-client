@@ -30,10 +30,9 @@ const UserCourseListItem = ({ toggleCourseDetailsModal, toggleDeleteSuccessAlert
       <Stack direction='row'>
         <CardMedia
           sx={styles.CardLogo}
-          image={require(`../../images/logos/${userCourse.Bootcamp.toLowerCase().replace(
-            /\s+/g,
-            '-'
-          )}.png`)}
+          image={require(
+            `../../images/logos/${userCourse.Bootcamp.toLowerCase().replace(/\s+/g, '-')}.png`
+          )}
           title={userCourse.Bootcamp}
         />
         <CardContent sx={styles.CardContent}>

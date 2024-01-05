@@ -9,16 +9,16 @@ const styles = {
     }
   }),
   LogoIcon: ({ palette }) => ({
-    animation: 'rotateAnimation 5s linear infinite',
+    'animation': 'rotateAnimation 5s linear infinite',
     '@keyframes rotateAnimation': {
       from: { transform: 'rotate(0deg)' },
       to: { transform: 'rotate(360deg)' }
     },
-    color: palette.primary.main,
-    display: 'block',
-    fontSize: '4em',
-    marginLeft: 'auto',
-    marginRight: 'auto'
+    'color': palette.primary.main,
+    'display': 'block',
+    'fontSize': '4em',
+    'marginLeft': 'auto',
+    'marginRight': 'auto'
   }),
   RegisterBtn: () => ({
     display: 'block',

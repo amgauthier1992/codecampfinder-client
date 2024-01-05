@@ -9,7 +9,7 @@ const styles = {
     '& .MuiPaper-root': {
       width: '100px' //somehow prevents Menu paper from overflowing beyond width of input itself (?)
     },
-    maxHeight: '300px' //allow smaller scrollable Menu when many Select options exist
+    'maxHeight': '300px' //allow smaller scrollable Menu when many Select options exist
   }),
   SelectMultiple: () => ({
     minHeight: '48px'
