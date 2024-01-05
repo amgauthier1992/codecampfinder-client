@@ -153,7 +153,6 @@ export function useDeleteUserCourse() {
   const [loading, setLoading] = useState(false);
 
   const destroy = useCallback(async (courseId, onSuccess) => {
-    console.log(courseId);
     const url = `${API_URLS.User}/course/${courseId}`;
     const token = JSON.parse(localStorage.getItem('session')).token;
 
