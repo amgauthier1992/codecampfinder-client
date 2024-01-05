@@ -25,4 +25,9 @@ const userCoursesState = atom({
   default: [],
 });
 
-export { userState, userCoursesState };
+const currentUserCourseState = atom({
+  key: 'currentUserCourseState',
+  default: {}
+});
+
+export { currentUserCourseState, userState, userCoursesState };

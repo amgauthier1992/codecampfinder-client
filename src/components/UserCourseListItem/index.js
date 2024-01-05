@@ -7,14 +7,19 @@ import {
   Stack,
   Typography
 } from '@mui/material';
-import { useDeleteUserCourse } from '../../_actions/users.actions';
+import { useDeleteUserCourse, useGetUserCourseDetails } from '../../_actions/users.actions';
 import { useCallback } from 'react';
 import DeleteIcon from '@mui/icons-material/Delete';
 import PropTypes from 'prop-types';
 import styles from './styles';
 
-const UserCourseListItem = ({ toggleDeleteSuccessAlert, userCourse }) => {
+const UserCourseListItem = ({ toggleCourseDetailsModal, toggleDeleteSuccessAlert, userCourse }) => {
   const { destroy } = useDeleteUserCourse();
+  const { get } = useGetUserCourseDetails();
+
+  const onSuccessGetCourseDetails = useCallback(() => {
+    toggleCourseDetailsModal();
+  }, [toggleCourseDetailsModal]);
 
   const onSuccessDeleteCourse = useCallback(() => {
     toggleDeleteSuccessAlert();
@@ -48,7 +53,12 @@ const UserCourseListItem = ({ toggleDeleteSuccessAlert, userCourse }) => {
         </CardContent>
       </Stack>
       <CardActions>
-        <Button variant='outlined'>Details</Button>
+        <Button
+          onClick={() => get(userCourse.CourseId, userCourse.Bootcamp, onSuccessGetCourseDetails)}
+          variant='outlined'
+        >
+          Details
+        </Button>
         <Button
           color='error'
           onClick={() => destroy(userCourse.CourseId, onSuccessDeleteCourse)}
@@ -64,6 +74,7 @@ const UserCourseListItem = ({ toggleDeleteSuccessAlert, userCourse }) => {
 export default UserCourseListItem;
 
 UserCourseListItem.propTypes = {
+  toggleCourseDetailsModal: PropTypes.func.isRequired,
   toggleDeleteSuccessAlert: PropTypes.func.isRequired,
   userCourse: PropTypes.shape({
     Bootcamp: PropTypes.string,

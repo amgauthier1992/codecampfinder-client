@@ -1,18 +1,11 @@
 const palette = {
   mode: 'light',
   primary: {
-    /* Old Blues */
-    // dark: '#4682b4',
-    // light: '#add8e6',
-    // main: '#1e90ff',
-
-    /* New Blues */
     dark: '#003366',
     light: '#66ccff',
     main: '#0066cc',
     contrastText: '#ffffff'
   },
-  /* Orange- Previous primary palette choice */
   secondary: {
     dark: '#f5821e',
     light: '#fcead6', //'#faa819',
