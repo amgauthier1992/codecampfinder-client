@@ -26,9 +26,7 @@ const styles = {
     '&:focus': {
       outline: 'none'
     },
-    [breakpoints.up('xs')]: {
-      width: '95%'
-    },
+    'width': '100%',
     [breakpoints.up('sm')]: {
       width: '85%'
     },

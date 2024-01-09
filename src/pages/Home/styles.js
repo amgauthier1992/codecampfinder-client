@@ -27,7 +27,11 @@ const styles = {
       width: '300px'
     },
     [breakpoints.up('lg')]: {
-      fontSize: '2.25rem'
+      fontSize: '2.25rem',
+      width: '400px'
+    },
+    [breakpoints.up('xl')]: {
+      width: '500px'
     }
   }),
   ContentWrapper: ({ breakpoints }) => ({
