@@ -1,4 +1,4 @@
-import { Box, Button, Container, Stack, Typography } from '@mui/material';
+import { Button, Container, Stack, Typography } from '@mui/material';
 import { useCallback } from 'react';
 import { useNavigate } from 'react-router';
 import { useIsMobile } from '../../_helpers/breakpoint';
@@ -14,10 +14,16 @@ const NotFound = () => {
   }, [navigate]);
 
   return (
-    <Container sx={styles.Container}>
+    <Container
+      maxWidth='xxl'
+      sx={styles.Container}
+    >
       <Stack
         direction='column'
+        justifyContent='center'
+        alignItems='flex-start'
         spacing={4}
+        sx={styles.ContentWrapper}
       >
         <Typography
           variant='h1'
@@ -25,7 +31,7 @@ const NotFound = () => {
           fontWeight={800}
           fontSize={isMobile ? '40px' : '48px'}
         >
-          {'<> 404: Page Not Found </>'}
+          {'404: Page Not Found'}
         </Typography>
         <Typography
           variant='body1'
@@ -35,15 +41,19 @@ const NotFound = () => {
           double-check your spelling. Otherwise, navigate back to the home page by using the button
           below.
         </Typography>
-        <Box sx={styles.CtaWrapper}>
+        <Stack
+          direction='row'
+          justifyContent='center'
+          sx={styles.CtaWrapper}
+        >
           <Button
             onClick={navigateHome}
             variant='contained'
             sx={styles.Cta}
           >
-            Back to Home
+            Home
           </Button>
-        </Box>
+        </Stack>
       </Stack>
     </Container>
   );

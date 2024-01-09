@@ -18,10 +18,16 @@ const Unauthorized = () => {
   }, [navigate]);
 
   return (
-    <Container sx={styles.Container}>
+    <Container
+      maxWidth='xxl'
+      sx={styles.Container}
+    >
       <Stack
         direction='column'
+        justifyContent='center'
+        alignItems='flex-start'
         spacing={4}
+        sx={styles.ContentWrapper}
       >
         <Typography
           variant='h1'
@@ -29,7 +35,7 @@ const Unauthorized = () => {
           fontWeight={800}
           fontSize={isMobile ? '40px' : '48px'}
         >
-          {'<> 401: Unauthorized </>'}
+          {'401: Unauthorized'}
         </Typography>
         <Typography
           variant='body1'
@@ -39,15 +45,16 @@ const Unauthorized = () => {
         </Typography>
         <Stack
           direction='row'
-          justifyContent={isMobile ? 'center' : 'flex-start'}
+          justifyContent='center'
           spacing={2}
+          sx={styles.CtaWrapper}
         >
           <Button
             onClick={navigateHome}
             variant='contained'
             sx={styles.Cta}
           >
-            Back to Home
+            Home
           </Button>
           <Button
             onClick={navigateToLogin}
