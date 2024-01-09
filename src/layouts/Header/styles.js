@@ -25,9 +25,15 @@ const styles = {
     color: 'inherit',
     fontWeight: 600
   }),
-  Toolbar: () => ({
-    display: 'flex',
-    justifyContent: 'space-between'
+  Toolbar: ({ breakpoints }) => ({
+    'display': 'flex',
+    'justifyContent': 'space-between',
+    '&.MuiToolbar-root': {
+      minHeight: '56px',
+      [breakpoints.up('sm')]: {
+        minHeight: '64px'
+      }
+    }
   })
 };
 

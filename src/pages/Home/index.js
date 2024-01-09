@@ -1,9 +1,8 @@
 import Header from '../../layouts/Header';
 import Footer from '../../layouts/Footer';
-import { Box, Button, Stack, Typography } from '@mui/material';
+import { Button, Stack, Typography } from '@mui/material';
 import { Link as ReactRouterLink } from 'react-router-dom';
 import styles from './styles';
-import theme from '../../theme';
 
 const Home = () => {
   return (
@@ -11,40 +10,40 @@ const Home = () => {
       <Header />
       <Stack
         direction='column'
+        justifyContent='center'
         spacing={2}
-        sx={styles.ContentWrapper(theme)}
+        sx={styles.MiddleWell}
       >
-        <Typography
-          variant='h2'
-          fontWeight={800}
-          sx={styles.ContentTitle}
+        <Stack
+          direction='column'
+          spacing={3}
+          sx={styles.ContentWrapper}
         >
-          Begin your Coding Journey
-        </Typography>
-        <Typography
-          variant='body2'
-          fontWeight={400}
-        >
-          Explore some of most popular coding bootcamps and their course offerings. Curate a list of
-          courses based on your individual needs and goals.
-        </Typography>
-        <Button
-          component={ReactRouterLink}
-          to='/sign-up'
-          sx={styles.Cta}
-          variant='contained'
-        >
-          Start Here
-        </Button>
+          <Typography
+            variant='h2'
+            fontWeight={800}
+            sx={styles.ContentTitle}
+          >
+            Begin your Coding Journey
+          </Typography>
+          <Typography
+            variant='body2'
+            fontWeight={400}
+            sx={styles.ContentPreface}
+          >
+            Explore some of most popular coding bootcamps and their course offerings. Curate a list
+            of courses based on your individual needs and goals.
+          </Typography>
+          <Button
+            component={ReactRouterLink}
+            to='/sign-up'
+            sx={styles.Cta}
+            variant='contained'
+          >
+            Start Here
+          </Button>
+        </Stack>
       </Stack>
-      <Box sx={styles.ImgWrapper}>
-        <Box
-          alt='Man sitting at desk using desktop computer'
-          component='img'
-          src={require('../../images/codecamp.jpg')}
-          sx={styles.Image}
-        />
-      </Box>
       <Footer />
     </>
   );

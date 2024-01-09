@@ -5,7 +5,6 @@ const styles = {
     bottom: 0,
     marginTop: 'auto',
     padding: '1rem',
-    position: 'fixed',
     width: '100%'
   })
 };

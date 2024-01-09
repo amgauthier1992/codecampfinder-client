@@ -1,55 +1,63 @@
 const styles = {
-  ContentTitle: () => ({
-    fontSize: '40px'
-  }),
-  ContentWrapper: ({ breakpoints }) => ({
-    display: 'block',
-    marginLeft: '1.5rem',
-    marginRight: '1.5rem',
-    paddingTop: '6rem',
-    width: '288px',
+  ContentPreface: ({ breakpoints }) => ({
+    width: '100%',
     [breakpoints.up('sm')]: {
-      width: '200px'
+      width: '75%'
     },
-    [breakpoints.up('768')]: {
-      paddingTop: '11rem',
-      width: '290px'
+    [breakpoints.between('sm', 'md')]: {
+      width: '50%'
     },
     [breakpoints.up('md')]: {
-      width: '340px !important' //This is being overriden w/o !important (?) Can't use exact px in combination with predefined breakpoints ('sm', 'md' etc.) MUI limitation?
+      width: '40%'
     },
     [breakpoints.up('lg')]: {
-      marginLeft: '6rem',
-      width: '400px !important'
+      width: '33%'
+    },
+    [breakpoints.up('xl')]: {
+      width: '25%'
+    }
+  }),
+  ContentTitle: ({ breakpoints }) => ({
+    fontSize: '2rem',
+    width: '100%',
+    [breakpoints.between('375', 'sm')]: {
+      width: '300px'
+    },
+    [breakpoints.up('sm')]: {
+      width: '300px'
+    },
+    [breakpoints.up('lg')]: {
+      fontSize: '2.25rem'
+    }
+  }),
+  ContentWrapper: ({ breakpoints }) => ({
+    '&.MuiStack-root': {
+      marginLeft: '2rem',
+      marginRight: '2rem',
+      marginTop: '2rem',
+      marginBottom: '2rem',
+      [breakpoints.up('lg')]: {
+        marginLeft: '4rem'
+      }
     }
   }),
   Cta: () => ({
-    'borderRadius': '25px',
-    'fontWeight': 700,
-    'height': '55px',
-    'width': '150px',
-    '&.MuiButtonBase-root': { marginTop: '2rem' }
+    borderRadius: '25px',
+    fontWeight: 700,
+    height: '55px',
+    width: '150px'
   }),
-  Image: ({ breakpoints }) => ({
-    opacity: 0.7,
-    width: '90%',
-    height: '100%',
-    objectFit: 'cover',
-    display: 'block',
-    marginLeft: 'auto',
-    [breakpoints.up('600')]: {
-      opacity: 1
-    }
-  }),
-  ImgWrapper: ({ breakpoints }) => ({
-    position: 'absolute',
-    zIndex: -100,
-    top: '56px',
-    bottom: '56px',
-    overflow: 'hidden',
-    width: '100%',
+  MiddleWell: ({ breakpoints }) => ({
+    backgroundImage: `url("${process.env.PUBLIC_URL}/codecamp-opaque.png")`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    minHeight: 'calc(100vh - 56px - 56px)',
     [breakpoints.up('sm')]: {
-      top: '64px'
+      minHeight: 'calc(100vh - 64px - 56px)'
+    },
+    [breakpoints.up('md')]: {
+      backgroundImage: `url("${process.env.PUBLIC_URL}/codecamp.jpg")`
     }
   })
 };
