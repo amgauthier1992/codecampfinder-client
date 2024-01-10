@@ -1,11 +1,20 @@
 const styles = {
   Container: () => ({
-    paddingTop: '10rem'
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minHeight: '100vh'
   }),
-  Content: ({ breakpoints }) => ({
-    width: '100%',
-    [breakpoints.up('md')]: {
-      width: '750px'
+  Content: () => ({
+    width: '100%'
+  }),
+  ContentWrapper: ({ breakpoints }) => ({
+    '&.MuiStack-root': {
+      width: '100%',
+      [breakpoints.up('sm')]: {
+        width: '525px'
+      }
     }
   }),
   Cta: () => ({
@@ -14,12 +23,8 @@ const styles = {
     borderRadius: '25px',
     fontWeight: '700'
   }),
-  CtaWrapper: ({ breakpoints }) => ({
-    display: 'flex',
-    justifyContent: 'center',
-    [breakpoints.up('sm')]: {
-      justifyContent: 'flex-start'
-    }
+  CtaWrapper: () => ({
+    width: '100%'
   })
 };
 

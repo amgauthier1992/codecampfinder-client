@@ -27,11 +27,14 @@ const styles = {
       outline: 'none'
     },
     'width': '100%',
+    'max-height': '100%',
+    'overflowY': 'auto',
     [breakpoints.up('sm')]: {
       width: '85%'
     },
     [breakpoints.up('md')]: {
-      width: '70%'
+      width: '70%',
+      height: 'auto'
     },
     [breakpoints.up('lg')]: {
       width: '65%'
