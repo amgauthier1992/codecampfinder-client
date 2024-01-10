@@ -223,7 +223,7 @@ const SearchForm = ({ handleDisplayResults }) => {
           item
           xs={12}
           lg={9}
-          sx={styles.GridItem}
+          sx={[styles.GridItem, styles.CtaWrapper]}
         >
           <Button
             type='submit'
