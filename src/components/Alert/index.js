@@ -6,6 +6,7 @@ import {
   DialogContent,
   DialogTitle,
   Grid,
+  Link,
   Stack,
   Typography
 } from '@mui/material';
@@ -58,7 +59,8 @@ function Alert() {
             {!alert?.error?.response?.data?.error?.message && alert?.error?.response?.data?.error}
           </Typography>
           <Typography>
-            Please, try again. If the error persists, please contact us at help@codecampfinder.com
+            Please, try again. If the error persists, please contact us at{' '}
+            <Link href='mailto:help@codecampfinder.com'>help@codecampfinder.com</Link>
           </Typography>
           <Typography>
             Error code:{' '}
