@@ -60,7 +60,12 @@ function Alert() {
           </Typography>
           <Typography>
             Please, try again. If the error persists, please contact us at{' '}
-            <Link href='mailto:help@codecampfinder.com'>help@codecampfinder.com</Link>
+            <Link
+              href='mailto:help@codecampfinder.com'
+              target='_blank'
+            >
+              help@codecampfinder.com
+            </Link>
           </Typography>
           <Typography>
             Error code:{' '}
