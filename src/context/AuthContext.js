@@ -7,7 +7,7 @@ import { useAlertActions } from '../_actions/alert.actions';
 import { useNavigate } from 'react-router';
 import axios from 'axios';
 
-const AuthContext = createContext();
+const AuthContext = createContext({});
 
 export const AuthProvider = ({ children }) => {
   const navigate = useNavigate();
