@@ -18,7 +18,7 @@ import { useAlertActions } from '../../_actions/alert.actions';
 import { useRecoilValue } from 'recoil';
 import { v4 as uuidv4 } from 'uuid';
 
-function Alert() {
+const Alert = () => {
   const alert = useRecoilValue(alertAtom);
   const alertActions = useAlertActions();
   const handleClear = alertActions.clear;
@@ -100,6 +100,6 @@ function Alert() {
       </DialogActions>
     </Dialog>
   );
-}
+};
 
 export { Alert };

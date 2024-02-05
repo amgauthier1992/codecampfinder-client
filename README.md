@@ -43,7 +43,7 @@ _Disclaimer_ - Information regarding bootcamps and courses, especially informati
 
 #### Testing
 
-- Jest
+- Jest / React Testing Library
 
 #### Production
 
